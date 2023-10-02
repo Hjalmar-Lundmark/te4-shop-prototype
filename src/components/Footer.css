@@ -8,3 +8,7 @@ footer {
 footer>*>p>a {
     color: lightblue;
 }
+
+footer>*>p {
+    font-size: var(--step--1);
+}
