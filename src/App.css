@@ -90,3 +90,11 @@ main {
   justify-content: space-between;
   min-height: 100vh;
 }
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
