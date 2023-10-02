@@ -10,18 +10,71 @@ function App() {
       <BrowserRouter>
         <main>
           <Navbar />
-          <div className='autoWidth'>
+          <div className='autoWidth flow'>
             {/*}
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/forecast" element={<Forecastpage />} />
           </Routes>
           */}
-            <header className='hero'>
-              <img src='https://picsum.photos/1280/720' alt='pic' />
-              <div className='filter'></div>
-              <h1>Köp nu</h1>
-            </header>
+            <a href="">
+              <header className='hero'>
+                <img src='../public/dog5.jpg' alt='pic' />
+                <h1>Köp nu</h1>
+              </header>
+            </a>
+            <section className='category1'>
+              <h2>Hundgrejer</h2>
+              <p>Vi har alla möjliga halsband, kläder och allt du kan tänka dig för just din hund. </p>
+              <ul className='cards'>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/dog1.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />175 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/dog2.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />200 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/dog3.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />200 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/dog4.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />200 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/dog3.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />200 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/dog2.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />200 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <section className='category2'>
+              <h2>Kattgrejer</h2>
+              <p>Vi har alla möjliga halsband, kläder och allt du kan tänka dig för just din katt. </p>
+            </section>
 
           </div>
         </main>

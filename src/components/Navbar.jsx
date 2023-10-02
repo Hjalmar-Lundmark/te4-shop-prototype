@@ -18,6 +18,9 @@ function Navbar() {
 
                 <div className='nav-items categories'>
                     <li className="nav-item">
+                        <Link to='/'><p>Alla varor</p></Link>
+                    </li>
+                    <li className="nav-item">
                         <Link to='/'><p>Hundgrejer</p></Link>
                     </li>
                     <li className="nav-item">

@@ -70,16 +70,20 @@ p {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+}
+
 main {
   padding-bottom: var(--space-l);
 }
 
-.flow>*+* {
-  margin-top: var(--flow-space, 1em);
+.flow>* {
+  margin-top: var(--flow-space, 3em);
 }
 
 .autoWidth {
-  width: min(55rem, 100vw - 2rem);
+  width: min(70rem, 100vw - 2rem);
   margin-inline: auto;
 }
 
@@ -92,6 +96,7 @@ main {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 li {
@@ -99,14 +104,16 @@ li {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
 .hero {
+  width: 100%;
   display: grid;
   grid-template-areas: "stack";
   text-align: center;
+  margin-top: 2rem;
 }
 
 .hero>* {
@@ -115,4 +122,18 @@ img {
 
 .hero>h1 {
   place-self: center;
+  color: var(--color-bg);
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card {
+  border: 1px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 0.5rem;
 }
