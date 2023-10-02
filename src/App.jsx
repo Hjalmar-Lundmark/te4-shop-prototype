@@ -19,7 +19,7 @@ function App() {
           */}
             <a href="">
               <header className='hero'>
-                <img src='../public/dog5.jpg' alt='pic' />
+                <img src='https://picsum.photos/1280/720' alt='pic' />
                 <h1>Köp nu</h1>
               </header>
             </a>
@@ -57,23 +57,55 @@ function App() {
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/dog3.jpg' alt='pic' width={175} height={175} />
+                    <img src='../public/dog5.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />200 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <h3 className='moreLink'><a href="">Och mer</a></h3>
+              </ul>
+            </section>
+            <section className='category2'>
+              <h2>Kattgrejer</h2>
+              <p>Vi har alla möjliga halsband, kläder och allt du kan tänka dig för just din katt. </p>
+              <ul className='cards'>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/cat1.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />175 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/cat2.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/dog2.jpg' alt='pic' width={175} height={175} />
+                    <img src='../public/cat3.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/cat4.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />200 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <li className='card'>
+                  <a href="">
+                    <img src='../public/cat1.jpg' alt='pic' width={175} height={175} />
+                    <p>Produkt <br />200 kr</p>
+                    <button>Lägg i varukorg</button>
+                  </a>
+                </li>
+                <h3 className='moreLink'><a href="">Och mer</a></h3>
               </ul>
-            </section>
-            <section className='category2'>
-              <h2>Kattgrejer</h2>
-              <p>Vi har alla möjliga halsband, kläder och allt du kan tänka dig för just din katt. </p>
             </section>
 
           </div>
