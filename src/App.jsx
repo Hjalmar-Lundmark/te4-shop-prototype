@@ -29,35 +29,35 @@ function App() {
               <ul className='cards'>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/dog1.jpg' alt='pic' width={175} height={175} />
+                    <img src='../dog1.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />175 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/dog2.jpg' alt='pic' width={175} height={175} />
+                    <img src='../dog2.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/dog3.jpg' alt='pic' width={175} height={175} />
+                    <img src='../dog3.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/dog4.jpg' alt='pic' width={175} height={175} />
+                    <img src='../dog4.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/dog5.jpg' alt='pic' width={175} height={175} />
+                    <img src='../dog5.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
@@ -71,35 +71,35 @@ function App() {
               <ul className='cards'>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/cat1.jpg' alt='pic' width={175} height={175} />
+                    <img src='../cat1.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />175 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/cat2.jpg' alt='pic' width={175} height={175} />
+                    <img src='../cat2.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/cat3.jpg' alt='pic' width={175} height={175} />
+                    <img src='../cat3.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/cat4.jpg' alt='pic' width={175} height={175} />
+                    <img src='../cat4.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>
                 </li>
                 <li className='card'>
                   <a href="">
-                    <img src='../public/cat1.jpg' alt='pic' width={175} height={175} />
+                    <img src='../cat1.jpg' alt='pic' width={175} height={175} />
                     <p>Produkt <br />200 kr</p>
                     <button>Lägg i varukorg</button>
                   </a>

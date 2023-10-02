@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { PiShoppingCartSimpleDuotone } from 'react-icons/pi';
 import './Navbar.css'
 
 function Navbar() {
@@ -12,7 +13,7 @@ function Navbar() {
                             <input type="text" placeholder='Sök bland produkter' />
                             <button>Sök</button>
                         </div>
-                        <button>Varukorg</button>
+                        <button><PiShoppingCartSimpleDuotone /></button>
                     </div>
                 </div>
 
