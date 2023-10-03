@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Homepage from './pages/Homepage'
 import Productpage from './pages/Productpage'
+import Allpage from './pages/Allpage'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/product" element={<Productpage />} />
+              <Route path="/all" element={<Allpage />} />
             </Routes>
           </div>
         </main>
