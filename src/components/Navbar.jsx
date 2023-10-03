@@ -7,7 +7,7 @@ function Navbar() {
         <nav className='navbar'>
             <div className="autoWidth">
                 <div className='nav'>
-                    <Link to='/'><h3>Djurkläder</h3></Link>
+                    <Link to='/'><h2>Djurkläder</h2></Link>
                     <div className='nav-items search'>
                         <div>
                             <input type="text" placeholder='Sök bland produkter' />

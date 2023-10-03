@@ -1,11 +1,11 @@
-
+import './Productpage.css'
 
 function Productpage() {
     return (
         <>
             <h1>Product Page</h1>
             <div className="product">
-                <div className="produktImg">
+                <div className="productImg">
                     <img src="../../dog1.jpg" alt="" />
                 </div>
                 <div className="productDesc">

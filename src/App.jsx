@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Homepage from './pages/Homepage'
+import Productpage from './pages/Productpage'
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
           <div className='autoWidth flow'>
             <Routes>
               <Route path="/" element={<Homepage />} />
-              {/* <Route path="/product" element={<Productpage />} /> */}
+              <Route path="/product" element={<Productpage />} />
             </Routes>
           </div>
         </main>

@@ -79,7 +79,7 @@ main {
 }
 
 .flow>* {
-  margin-top: var(--flow-space, 3em);
+  margin-top: var(--flow-space, 1em);
 }
 
 .autoWidth {

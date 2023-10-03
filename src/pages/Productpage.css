@@ -1,0 +1,14 @@
+.product {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid var(--color-accent);
+}
+
+.productImg {
+    width: 60%;
+    height: auto;
+}
+
+.productDesc {
+    padding: 1rem;
+}
