@@ -5,9 +5,7 @@ function Productpage() {
         <>
             <h1>Product Page</h1>
             <div className="product">
-                <div className="productImg">
-                    <img src="../../dog1.jpg" alt="" />
-                </div>
+                <img className='productImg' src="../../dog1.jpg" alt="" />
                 <div className="productDesc">
                     <h2>Product name</h2>
                     <p>Product description</p>
