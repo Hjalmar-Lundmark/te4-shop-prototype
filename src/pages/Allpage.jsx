@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import ProductCard from "../components/ProductCard"
 import './Allpage.css'
 
 function Allpage() {
@@ -6,84 +6,82 @@ function Allpage() {
         <>
             <h1>All Products</h1>
             <h2>Some kind of filter thing here</h2>
-            <ul className='AllWares'>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../dog1.jpg' alt='pic' />
-                        <p>Produkt <br />175 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../dog1.jpg' alt='pic' />
-                        <p>Produkt <br />175 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../dog2.jpg' alt='pic' />
-                        <p>Produkt <br />200 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../dog3.jpg' alt='pic' />
-                        <p>Produkt <br />200 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../dog4.jpg' alt='pic' />
-                        <p>Produkt <br />200 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../dog5.jpg' alt='pic' />
-                        <p>Produkt <br />200 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../cat1.jpg' alt='pic' />
-                        <p>Produkt <br />175 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../cat2.jpg' alt='pic' />
-                        <p>Produkt <br />200 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../cat3.jpg' alt='pic' />
-                        <p>Produkt <br />200 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../cat4.jpg' alt='pic' />
-                        <p>Produkt <br />200 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
-                <li className='card'>
-                    <Link to='/product'>
-                        <img src='../cat1.jpg' alt='pic' />
-                        <p>Produkt <br />200 kr</p>
-                        <button>Lägg i varukorg</button>
-                    </Link>
-                </li>
+            <ul className='allWares'>
+                <ProductCard
+                    img='/dog1.jpg'
+                    name='Produkt'
+                    price='175'
+                />
+                <ProductCard
+                    img='/dog2.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/dog3.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/dog4.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/dog5.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/cat1.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/cat2.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/cat3.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/cat4.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/cat1.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/bee.jpg'
+                    name='Bee GoPro'
+                    price='300'
+                />
+                <ProductCard
+                    img='/croc.jpeg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/crab.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/hedgehog.jpg'
+                    name='Produkt'
+                    price='200'
+                />
+                <ProductCard
+                    img='/llama1.jpg'
+                    name='Produkt'
+                    price='200'
+                />
             </ul>
         </>
     )

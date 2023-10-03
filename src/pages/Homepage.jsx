@@ -35,7 +35,7 @@ function Homepage() {
             price='200'
           />
           <ProductCard
-            img='/dog2.jpg'
+            img='/dog5.jpg'
             name='Produkt'
             price='200'
           />

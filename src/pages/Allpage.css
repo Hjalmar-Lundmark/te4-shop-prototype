@@ -1,8 +1,13 @@
-.AllWares {
+.allWares {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
 
-.AllWares>.card {
+.allWares>.card {
     margin-bottom: 0.5rem;
+}
+
+.allWares>.card>*>img {
+    width: 200px;
+    height: 200px;
 }

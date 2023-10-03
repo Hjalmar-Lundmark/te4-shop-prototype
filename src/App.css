@@ -142,7 +142,7 @@ img {
   margin-right: 0.5rem;
 }
 
-.card>*>img {
+.cards>.card>*>img {
   width: 167px;
   height: 167px;
 }
