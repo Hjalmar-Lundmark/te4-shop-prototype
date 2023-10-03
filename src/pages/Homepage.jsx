@@ -93,6 +93,48 @@ function Homepage() {
           <h3 className='moreLink'><Link to='/all'>Och mer</Link></h3>
         </ul>
       </section>
+      <section className='category3'>
+        <h2>Annat</h2>
+        <p>Vi har också saker för dina ovanliga djur och diverse annat. </p>
+        <ul className='cards'>
+          <li className='card'>
+            <Link to='/product'>
+              <img src='../cat1.jpg' alt='pic' />
+              <p>Produkt <br />175 kr</p>
+              <button>Lägg i varukorg</button>
+            </Link>
+          </li>
+          <li className='card'>
+            <Link to='/product'>
+              <img src='../cat2.jpg' alt='pic' />
+              <p>Produkt <br />200 kr</p>
+              <button>Lägg i varukorg</button>
+            </Link>
+          </li>
+          <li className='card'>
+            <Link to='/product'>
+              <img src='../cat3.jpg' alt='pic' />
+              <p>Produkt <br />200 kr</p>
+              <button>Lägg i varukorg</button>
+            </Link>
+          </li>
+          <li className='card'>
+            <Link to='/product'>
+              <img src='../cat4.jpg' alt='pic' />
+              <p>Produkt <br />200 kr</p>
+              <button>Lägg i varukorg</button>
+            </Link>
+          </li>
+          <li className='card'>
+            <Link to='/product'>
+              <img src='../cat1.jpg' alt='pic' />
+              <p>Produkt <br />200 kr</p>
+              <button>Lägg i varukorg</button>
+            </Link>
+          </li>
+          <h3 className='moreLink'><Link to='/all'>Och mer</Link></h3>
+        </ul>
+      </section>
 
     </>
   );
