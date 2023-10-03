@@ -3,7 +3,7 @@ import './Cart.css'
 function Cart() {
     return (
         <>
-            <div className="cart">
+            <div className="cart" id='cart'>
                 <h2>Varukorg</h2>
                 <div className='items'>
                     <div className="item">
@@ -13,15 +13,19 @@ function Cart() {
                         <button>Remove</button>
                     </div>
                     <div className="item">
-                        <img src="" alt="" />
+                        <img src="../../dog4.jpg" alt="" />
                         <h3>Produkt 2</h3>
                         <p>2000 kr</p>
                         <button>Remove</button>
                     </div>
                 </div>
-
-                <button>Gå till kassan</button>
-                <button>Töm korgen</button>
+                <div className='cartBtns'>
+                    <button>Töm korgen</button>
+                    <div className='cartBtns'>
+                        <p>4000 kr</p>
+                        <button>Gå till kassan</button>
+                    </div>
+                </div>
             </div>
         </>
     )

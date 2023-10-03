@@ -4,6 +4,14 @@ import './Navbar.css'
 import Cart from './Cart';
 
 function Navbar() {
+    function flipCart() {
+        if (document.getElementById('cart').style.display === 'block') {
+            document.getElementById('cart').style.display = 'none'
+        } else {
+            document.getElementById('cart').style.display = 'block'
+        }
+    }
+
     return (
         <nav className='navbar'>
             <div className="autoWidth">
@@ -14,7 +22,7 @@ function Navbar() {
                             <input type="text" placeholder='Sök bland produkter' className='searchField' />
                             <button><h3 className='navBtn'>Sök</h3></button>
                         </div>
-                        <button onClick={() => { document.getElementById('cart').style.display = 'block' }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
+                        <button onClick={() => { flipCart() }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
                         <Cart />
                     </div>
                 </div>
