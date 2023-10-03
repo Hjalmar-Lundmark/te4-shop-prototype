@@ -6,7 +6,7 @@ function Allpage() {
         <>
             <h1>All Products</h1>
             <h2>Some kind of filter thing here</h2>
-            <ul className='cards AllWares'>
+            <ul className='AllWares'>
                 <li className='card'>
                     <Link to='/product'>
                         <img src='../dog1.jpg' alt='pic' />

@@ -143,3 +143,15 @@ img {
 .moreLink {
   margin-left: 0.5rem;
 }
+
+.searchArea {
+  display: flex;
+}
+
+.searchField {
+  height: 2rem;
+}
+
+.navBtn {
+  margin: 0;
+}
