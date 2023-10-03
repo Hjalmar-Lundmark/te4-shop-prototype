@@ -143,6 +143,7 @@ img {
 }
 
 .cards>.card>*>img {
+  /* TODO: fix img-sizing */
   width: 183px;
   height: 183px;
 }
