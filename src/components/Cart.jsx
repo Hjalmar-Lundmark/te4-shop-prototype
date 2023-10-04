@@ -3,30 +3,34 @@ import './Cart.css'
 import CartItem from './CartItem'
 
 function Cart() {
-    const [cartItems, setCartItems] = useState(() => {
-        return JSON.parse(localStorage.getItem('cartItems')) || [];
-    });
+    // const [cartItems, setCartItems] = useState(() => {
+    //     console.log('please work')
+    //     return JSON.parse(localStorage.getItem('cartItems'));
+    // });
+    var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
     const deleteItem = (id) => {
+        cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
         const newCartItems = cartItems.filter(item => item.id !== id)
-        setCartItems(newCartItems)
+        //setCartItems(newCartItems)
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
 
     const deleteAll = () => {
-        setCartItems([]);
+        //setCartItems([]);
         localStorage.setItem('cartItems', JSON.stringify([]));
     }
 
     // AddItem moved to Productpage.jsx + ProductCard.jsx, since it's only used there
 
     // yeah idk
-    /*useEffect(() => {
+    useEffect(() => {
         console.log('useEffect')
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        console.log(cartItems)
+        // localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        // console.log(cartItems)
     }, [cartItems])
-    */
+
 
     return (
         <>
@@ -45,7 +49,7 @@ function Cart() {
                     )}
                 </div>
                 <div className='cartBtns'>
-                    <button onClick={() => { deleteAll }}>Töm korgen</button>
+                    <button onClick={() => { deleteAll() }}>Töm korgen</button>
                     <div className='cartBtns'>
                         <p>4000 kr</p>
                         <button>Gå till kassan</button>

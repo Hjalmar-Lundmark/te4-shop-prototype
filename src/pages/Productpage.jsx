@@ -1,14 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Productpage.css'
 
 function Productpage() {
-    const [cartItems, setCartItems] = useState(() => {
-        return JSON.parse(localStorage.getItem('cartItems')) || [];
-    });
+    // const [cartItems, setCartItems] = useState(() => {
+    //     console.log('please work')
+    //     return JSON.parse(localStorage.getItem('cartItems'));
+    // });
+    var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
     const addItem = () => {
-        //const name = document.getElementById('name').value || 'placeholder'; // TODO: change this
-        //if (name === '') { return }
+        // TODO: get name from somewhere
+        cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
         let newCartItems
         if (cartItems.length > 0) {
             newCartItems = [...cartItems, { id: cartItems[cartItems.length - 1].id + 1, name: 'placeholder' }]
@@ -24,10 +27,16 @@ function Productpage() {
             alert('Produkten lades till i varukorgen')
         }
 
-        setCartItems(newCartItems)
+        //setCartItems(newCartItems)
 
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
+
+    useEffect(() => {
+        console.log('useEffect')
+        // localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        // console.log(cartItems)
+    }, [cartItems])
 
     return (
         <>
