@@ -5,10 +5,11 @@
 }
 
 .productImg {
-    width: 65%;
+    width: 60%;
     height: auto;
 }
 
 .productDesc {
     padding: 1rem;
+    width: 40%;
 }

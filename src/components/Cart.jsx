@@ -20,6 +20,7 @@ function Cart() {
 
     useEffect(() => {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        console.log(cartItems)
     }, [cartItems])
 
     return (
@@ -27,14 +28,14 @@ function Cart() {
             <div className="cart" id='cart'>
                 <h2>Varukorg</h2>
                 <div className='items'>
-                    {cartItems.map((todo, index) =>
+                    {cartItems.map((item, index) =>
                         <CartItem
                             key={index}
-                            id={todo.id}
-                            name={todo.name || 'Product'} // where should I get these from?
-                            deleteTodo={deleteItem}
-                            img={todo.img || 'dog5.jpg'}
-                            price={todo.price || 100}
+                            id={item.id}
+                            name={item.name || 'Product'} // where should I get these from?
+                            deleteItem={deleteItem}
+                            img={item.img || 'dog5.jpg'}
+                            price={item.price || 100}
                         />
                     )}
                 </div>
