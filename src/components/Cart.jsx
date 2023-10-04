@@ -8,20 +8,25 @@ function Cart() {
     });
 
     const deleteItem = (id) => {
-        const newcartItems = cartItems.filter(item => item.id !== id)
-        setCartItems(newcartItems)
+        const newCartItems = cartItems.filter(item => item.id !== id)
+        setCartItems(newCartItems)
+        localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
 
     const deleteAll = () => {
         setCartItems([]);
+        localStorage.setItem('cartItems', JSON.stringify([]));
     }
 
     // AddItem moved to Productpage.jsx + ProductCard.jsx, since it's only used there
 
-    useEffect(() => {
+    // yeah idk
+    /*useEffect(() => {
+        console.log('useEffect')
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         console.log(cartItems)
     }, [cartItems])
+    */
 
     return (
         <>

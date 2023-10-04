@@ -9,12 +9,24 @@ function Productpage() {
     const addItem = () => {
         //const name = document.getElementById('name').value || 'placeholder'; // TODO: change this
         //if (name === '') { return }
-        const newcartItems = [...cartItems, { id: cartItems[cartItems.length].id + 1 || 0, name: 'placeholder' }] //uses locally stored number to get index
-        setCartItems(newcartItems)
+        let newCartItems
+        if (cartItems.length > 0) {
+            newCartItems = [...cartItems, { id: cartItems[cartItems.length - 1].id + 1, name: 'placeholder' }]
+        } else {
+            newCartItems = [...cartItems, { id: 0, name: 'placeholder' }]
+        }
 
-
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
         console.log(cartItems)
+        console.log(newCartItems)
+        if (cartItems === newCartItems) {
+            alert('Något gick fel, försök igen')
+        } else {
+            alert('Produkten lades till i varukorgen')
+        }
+
+        setCartItems(newCartItems)
+
+        localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
 
     return (

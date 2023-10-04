@@ -11,8 +11,13 @@ function ProductCard(props) {
     const addItem = () => {
         //const name = document.getElementById('name').value; // TODO: change this
         //if (name === '') { return }
-        const newcartItems = [...cartItems, { id: cartItems[cartItems.length - 1].id + 1, name: 'placeholder' }] //uses locally stored number to get index
-        setCartItems(newcartItems)
+        let newCartItems
+        if (cartItems.length > 0) {
+            newCartItems = [...cartItems, { id: cartItems[cartItems.length - 1].id + 1, name: 'placeholder' }] //uses locally stored number to get index
+        } else {
+            newCartItems = [...cartItems, { id: 0, name: 'placeholder' }]
+        }
+        setCartItems(newCartItems)
 
 
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
