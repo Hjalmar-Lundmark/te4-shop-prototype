@@ -16,7 +16,7 @@ function Navbar() {
         <nav className='navbar'>
             <div className="autoWidth">
                 <div className='nav'>
-                    <Link to='/'><h2>Fluff&Fashion</h2></Link>
+                    <Link to='/'><img src="FF.png" alt="logo" /></Link>
                     <div className='nav-items'>
                         <div className='searchArea'>
                             <input type="text" placeholder='Sök bland produkter' className='searchField' />
