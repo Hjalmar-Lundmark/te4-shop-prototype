@@ -16,7 +16,7 @@ function Cart() {
 
         console.log(id)
         const newCartItems = cartItems.filter(item => item.id !== id)
-        //setCartItems(newCartItems) // aaaaaaaaaaaaaaaa
+        setCartItems(newCartItems) // aaaaaaaaaaaaaaaa
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
 
