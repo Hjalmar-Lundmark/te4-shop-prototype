@@ -79,7 +79,7 @@ function Homepage() {
         <p>Vi har också saker för dina ovanliga djur och diverse annat. </p>
         <ul className='cards'>
           <ProductCard
-            img='/bee.jpg'
+            img='/bee1.jpg'
             name='Bee GoPro'
             price='300'
           />
