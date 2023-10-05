@@ -4,7 +4,7 @@ import './Productpage.css'
 function Productpage() {
     // const [cartItems, setCartItems] = useState(() => {
     //     console.log('please work')
-    //     return JSON.parse(localStorage.getItem('cartItems'));
+    //     return JSON.parse(localStorage.getItem('cartItems')) || [];
     // });
 
     //const [cartItems, setCartItems] = useState([])

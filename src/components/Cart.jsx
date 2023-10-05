@@ -1,24 +1,26 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './Cart.css'
 import CartItem from './CartItem'
 
 function Cart() {
-    // const [cartItems, setCartItems] = useState(() => {
-    //     console.log('please work')
-    //     return JSON.parse(localStorage.getItem('cartItems'));
-    // });
-    var cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    const [cartItems, setCartItems] = useState(() => {
+        console.log('please work')
+        return JSON.parse(localStorage.getItem('cartItems')) || [];
+    });
+    //var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
     const deleteItem = (id) => {
-        cartItems = JSON.parse(localStorage.getItem('cartItems'));
+        //cartItems = JSON.parse(localStorage.getItem('cartItems'));
+        setCartItems(JSON.parse(localStorage.getItem('cartItems')))
 
+        console.log(id)
         const newCartItems = cartItems.filter(item => item.id !== id)
-        //setCartItems(newCartItems)
+        setCartItems(newCartItems)
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
 
     const deleteAll = () => {
-        //setCartItems([]);
+        setCartItems([]);
         localStorage.setItem('cartItems', JSON.stringify([]));
     }
 

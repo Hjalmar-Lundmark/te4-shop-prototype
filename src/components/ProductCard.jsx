@@ -6,7 +6,7 @@ function ProductCard(props) {
 
     // const [cartItems, setCartItems] = useState(() => {
     //     console.log('please work')
-    //     return JSON.parse(localStorage.getItem('cartItems'));
+    //     return JSON.parse(localStorage.getItem('cartItems')) || [];
     // });
     var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
