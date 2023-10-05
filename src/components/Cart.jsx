@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import './Cart.css'
 import CartItem from './CartItem'
 

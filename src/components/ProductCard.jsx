@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 
 function ProductCard(props) {
     let { img, name, price } = props

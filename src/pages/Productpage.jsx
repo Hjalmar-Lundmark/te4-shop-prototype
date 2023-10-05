@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import './Productpage.css'
 
 function Productpage() {
@@ -6,6 +6,9 @@ function Productpage() {
     //     console.log('please work')
     //     return JSON.parse(localStorage.getItem('cartItems'));
     // });
+
+    //const [cartItems, setCartItems] = useState([])
+
     var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
     const addItem = () => {
