@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './Cart.css'
 import CartItem from './CartItem'
+import { PiShoppingCartSimpleDuotone } from 'react-icons/pi';
 
 function Cart() {
     const [cartItems, setCartItems] = useState(() => {
@@ -15,7 +16,7 @@ function Cart() {
 
         console.log(id)
         const newCartItems = cartItems.filter(item => item.id !== id)
-        setCartItems(newCartItems)
+        //setCartItems(newCartItems) // aaaaaaaaaaaaaaaa
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
 
@@ -33,9 +34,17 @@ function Cart() {
         // console.log(cartItems)
     }, [cartItems])
 
+    function flipCart() {
+        if (document.getElementById('cart').style.display === 'block') {
+            document.getElementById('cart').style.display = 'none'
+        } else {
+            document.getElementById('cart').style.display = 'block'
+        }
+    }
 
     return (
         <>
+            <button onClick={() => { flipCart(); setCartItems(cartItems) }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
             <div className="cart" id='cart'>
                 <h2>Varukorg</h2>
                 <div className='items'>

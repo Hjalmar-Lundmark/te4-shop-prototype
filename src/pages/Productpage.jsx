@@ -35,11 +35,11 @@ function Productpage() {
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
 
-    useEffect(() => {
-        console.log('useEffect')
-        // localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        // console.log(cartItems)
-    }, [cartItems])
+    // useEffect(() => {
+    //     console.log('useEffect')
+    //     // localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    //     // console.log(cartItems)
+    // }, [cartItems])
 
     return (
         <>
