@@ -1,6 +1,8 @@
 .allWares {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    align-items: start;
+    grid-template-rows: masonry;
 }
 
 .allWares>.card {
