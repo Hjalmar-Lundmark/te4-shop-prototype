@@ -10,7 +10,9 @@ function Footer() {
                     Ångerrätt gäller i 14 dagar från leverans. <br />
                     Alla priser är inklusive moms. <br />
                     Vi använder cookies för att förbättra din upplevelse på vår hemsida. <br />
-                    <Link to='/kontakt'>Kontakta oss</Link> om du har några frågor.
+                    <Link to='/kontakt'>Kontakta oss</Link> om du har några frågor. <br />
+                    <Link to='mailto:realmail@mail.com'>realmail@mail.com</Link>. <br />
+                    070-123 45 67
                 </p>
             </div>
         </footer>
