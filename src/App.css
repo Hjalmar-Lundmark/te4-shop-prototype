@@ -143,6 +143,10 @@ img {
   margin-right: 0.5rem;
 }
 
+.card>*>img {
+  max-height: 220px;
+}
+
 .card>button,
 .productDesc>button {
   background-color: var(--color-accent);

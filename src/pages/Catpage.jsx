@@ -28,7 +28,7 @@ function Catpage() {
                 <button><Link to='/all'>X</Link></button>
             </div>
             <ul className='allWares'>
-                {products ? (
+                {products.length > 0 ? (
                     <>
                         {products.map((item) => (
                             <ProductCard

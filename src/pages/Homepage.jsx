@@ -112,7 +112,7 @@ function Homepage() {
         <h2>Annat</h2>
         <p>Vi har också saker för dina ovanliga djur och diverse annat. </p>
         <ul className='cards'>
-          {/* {otherProducts.length > 0 ? (
+          {otherProducts.length > 0 ? (
             <>
               {otherProducts.map((item) => (
                 <ProductCard
@@ -126,32 +126,7 @@ function Homepage() {
             </>
           ) : (
             <p>Problem med att ladda in produkter</p>
-          )} */}
-          <ProductCard
-            img='/bee1.jpg'
-            name='Bee GoPro'
-            price='300'
-          />
-          <ProductCard
-            img='/croc.jpeg'
-            name='Produkt'
-            price='200'
-          />
-          <ProductCard
-            img='/crab.jpg'
-            name='Produkt'
-            price='200'
-          />
-          <ProductCard
-            img='/hedgehog.jpg'
-            name='Produkt'
-            price='200'
-          />
-          <ProductCard
-            img='/llama1.jpg'
-            name='Produkt'
-            price='200'
-          />
+          )}
           <h3 className='moreLink'><Link to='/all/other'>...</Link></h3>
         </ul>
       </section>
