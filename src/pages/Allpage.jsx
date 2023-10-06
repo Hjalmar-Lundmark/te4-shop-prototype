@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard"
 import './Allpage.css'
+import { Link } from 'react-router-dom'
 
 function Allpage() {
   const [products, setProducts] = useState([])
@@ -24,7 +25,20 @@ function Allpage() {
   return (
     <>
       <h1>Alla produkter</h1>
-      <h2>Some kind of filter thing here</h2>
+      <div className="filters">
+        <div className='filter'>
+          <p>Hund produkter</p>
+          <button><Link to='/all/dog'>+</Link></button>
+        </div>
+        <div className='filter'>
+          <p>Katt produkter</p>
+          <button><Link to='/all/cat'>+</Link></button>
+        </div>
+        <div className='filter'>
+          <p>Andra produkter</p>
+          <button><Link to='/all/other'>+</Link></button>
+        </div>
+      </div>
       <ul className='allWares'>
         {products ? (
           <>

@@ -34,7 +34,7 @@ function Dogpage() {
                         {products.map((item) => (
                             <ProductCard
                                 key={item.id}
-                                img={item.image}
+                                img={'../' + item.image}
                                 name={item.name}
                                 price={item.price}
                             />

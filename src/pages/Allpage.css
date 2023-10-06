@@ -21,6 +21,7 @@
     border: 1px solid black;
     width: fit-content;
     padding: 0.5rem;
+    align-items: center;
 }
 
 .filter>button {
@@ -28,4 +29,17 @@
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+.filter>p {
+    margin: 0;
+}
+
+.filters {
+    display: flex;
+    gap: 2rem;
+}
+
+.filters>.filter {
+    background-color: lightblue;
 }
