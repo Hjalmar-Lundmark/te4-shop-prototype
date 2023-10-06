@@ -8,6 +8,7 @@ function Cart() {
         console.log('please work')
         return JSON.parse(localStorage.getItem('cartItems')) || [];
     });
+    const [test, setTest] = useState(0);
     //var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
     const deleteItem = (id) => {
@@ -32,7 +33,7 @@ function Cart() {
         console.log('useEffect')
         // localStorage.setItem('cartItems', JSON.stringify(cartItems));
         // console.log(cartItems)
-    }, [cartItems])
+    }, [cartItems, test])
 
     function flipCart() {
         if (document.getElementById('cart').style.display === 'block') {
@@ -44,7 +45,7 @@ function Cart() {
 
     return (
         <>
-            <button onClick={() => { flipCart(); setCartItems(cartItems) }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
+            <button onClick={() => { flipCart(); setTest(test + 1) }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
             <div className="cart" id='cart'>
                 <h2>Varukorg</h2>
                 <div className='items'>
