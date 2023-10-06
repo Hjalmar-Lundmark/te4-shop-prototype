@@ -44,8 +44,8 @@ function ProductCard(props) {
             <Link to='/product'>
                 <img src={img} alt={name} />
                 <p>
-                    {name} <br /><br />
-                    {oldPrice ? (<><s>{oldPrice} kr</s><br /></>) : (' ')}
+                    {name} <br />
+                    {oldPrice ? (<><s>{oldPrice} kr</s><br /></>) : (<br />)}
                     {price} kr
                 </p>
             </Link>

@@ -9,7 +9,6 @@ function Catpage() {
         await fetch(`http://localhost:3000`)
             .then(res => res.json())
             .then(result => {
-                console.log(result.data)
                 result.data = result.data.filter(item => item.categoryId === 1)
                 setProducts(result.data);
             }).catch(err => {

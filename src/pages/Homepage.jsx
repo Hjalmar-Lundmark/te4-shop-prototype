@@ -1,12 +1,34 @@
 import { Link } from 'react-router-dom'
 import ProductCard from '../components/ProductCard';
+import { useState, useEffect } from 'react'
 
 function Homepage() {
+  const [dogProducts, setDogProducts] = useState([])
+  const [catProducts, setCatProducts] = useState([])
+  const [otherProducts, setOtherProducts] = useState([])
+
+  async function fetchProducts() {
+    await fetch(`http://localhost:3000`)
+      .then(res => res.json())
+      .then(result => {
+        setDogProducts(result.data.filter(item => item.categoryId === 2))
+        setCatProducts(result.data.filter(item => item.categoryId === 1))
+        setOtherProducts(result.data.filter(item => item.categoryId === 3))
+
+      }).catch(err => {
+        console.log(err)
+      });
+  }
+
+  useEffect(() => {
+    fetchProducts()
+  }, [])
+
   return (
     <>
       <Link to='/product'>
         <header className='hero'>
-          <img src='https://picsum.photos/1280/720' alt='pic' />
+          <img src='canDog.jpg' alt='pic' />
           <h1>Köp nu</h1>
         </header>
       </Link>
@@ -14,7 +36,25 @@ function Homepage() {
         <h2>Hundgrejer</h2>
         <p>Vi har alla möjliga halsband, kläder och allt du kan tänka dig för just din hund. </p>
         <ul className='cards'>
-          <ProductCard
+          {dogProducts ? (
+            <>
+              {dogProducts.filter((i = 0) => (
+                i.id < 8
+              )).map((item) => (
+                <ProductCard
+                  key={item.id}
+                  img={item.image}
+                  name={item.name}
+                  price={item.price}
+                  oldPrice={item.oldPrice}
+                />
+              )
+              )}
+            </>
+          ) : (
+            <p>There was an error loading products</p>
+          )}
+          {/* <ProductCard
             img='/dog1.jpg'
             name='Produkt'
             price='175'
@@ -38,7 +78,7 @@ function Homepage() {
             img='/dog5.jpg'
             name='Produkt'
             price='200'
-          />
+          /> */}
           <h3 className='moreLink'><Link to='/all/dog'>Och mer</Link></h3>
         </ul>
       </section >

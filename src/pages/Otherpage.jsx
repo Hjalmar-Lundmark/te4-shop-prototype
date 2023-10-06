@@ -9,7 +9,6 @@ function Otherpage() {
         await fetch(`http://localhost:3000`)
             .then(res => res.json())
             .then(result => {
-                console.log(result.data)
                 result.data = result.data.filter(item => item.categoryId === 3)
                 setProducts(result.data);
             }).catch(err => {
