@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage'
 import Productpage from './pages/Productpage'
 import Allpage from './pages/Allpage'
 import Dogpage from './pages/Dogpage'
+import Catpage from './pages/Catpage'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
               <Route path="/product" element={<Productpage />} />
               <Route path="/all" element={<Allpage />} />
               <Route path="/all/dog" element={<Dogpage />} />
+              <Route path="/all/cat" element={<Catpage />} />
             </Routes>
           </div>
         </main>

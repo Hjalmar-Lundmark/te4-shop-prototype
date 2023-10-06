@@ -27,7 +27,7 @@ function Navbar() {
                         <Link to='/all/dog'><p>Hundgrejer</p></Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/'><p>Kattgrejer</p></Link>
+                        <Link to='/all/cat'><p>Kattgrejer</p></Link>
                     </li>
                 </div>
             </div>
