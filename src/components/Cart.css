@@ -1,7 +1,7 @@
 .cart {
     background-color: var(--color-bg);
     position: absolute;
-    width: 400px;
+    width: 450px;
     height: auto;
     border: 2px solid var(--color-fg);
     margin-top: 320px;
@@ -43,4 +43,14 @@
 
 .cartBtns>p {
     margin: 0 0.5rem 0 0;
+}
+
+.cartBtns>button,
+.item>button {
+    background-color: var(--color-accent);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1rem;
 }

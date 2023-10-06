@@ -13,3 +13,12 @@
     padding: 1rem;
     width: 40%;
 }
+
+.productDesc>button {
+    background-color: var(--color-accent);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1rem;
+}
