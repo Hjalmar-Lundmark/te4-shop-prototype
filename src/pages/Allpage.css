@@ -31,6 +31,10 @@
     cursor: pointer;
 }
 
+.filter>button:hover {
+    filter: drop-shadow(0 0 4px black);
+}
+
 .filter>p {
     margin: 0;
 }

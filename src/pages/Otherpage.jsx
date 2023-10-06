@@ -37,6 +37,7 @@ function Otherpage() {
                                 img={'../' + item.image}
                                 name={item.name}
                                 price={item.price}
+                                oldPrice={item.oldPrice}
                             />
                         ))}
                     </>

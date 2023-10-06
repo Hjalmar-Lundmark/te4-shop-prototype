@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 function ProductCard(props) {
-    let { img, name, price } = props
+    let { img, name, price, oldPrice } = props
 
     // const [cartItems, setCartItems] = useState(() => {
     //     console.log('please work')
@@ -43,7 +43,11 @@ function ProductCard(props) {
         <li className='card'>
             <Link to='/product'>
                 <img src={img} alt={name} />
-                <p>{name} <br />{price} kr</p>
+                <p>
+                    {name} <br /><br />
+                    {oldPrice ? (<><s>{oldPrice} kr</s><br /></>) : (' ')}
+                    {price} kr
+                </p>
             </Link>
             <button onClick={() => { addItem() }}>Lägg i varukorg</button>
         </li>

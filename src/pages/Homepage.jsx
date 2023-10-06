@@ -39,7 +39,7 @@ function Homepage() {
             name='Produkt'
             price='200'
           />
-          <h3 className='moreLink'><Link to='/all'>Och mer</Link></h3>
+          <h3 className='moreLink'><Link to='/all/dog'>Och mer</Link></h3>
         </ul>
       </section >
       <section className='category2'>
@@ -71,7 +71,7 @@ function Homepage() {
             name='Produkt'
             price='200'
           />
-          <h3 className='moreLink'><Link to='/all'>Och mer</Link></h3>
+          <h3 className='moreLink'><Link to='/all/cat'>Och mer</Link></h3>
         </ul>
       </section>
       <section className='category3'>
@@ -103,7 +103,7 @@ function Homepage() {
             name='Produkt'
             price='200'
           />
-          <h3 className='moreLink'><Link to='/all'>Och mer</Link></h3>
+          <h3 className='moreLink'><Link to='/all/other'>Och mer</Link></h3>
         </ul>
       </section>
 

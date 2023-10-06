@@ -18,6 +18,10 @@
     gap: 1rem;
 }
 
+.categories {
+    align-items: end;
+}
+
 .nav-item {
     padding-left: 1rem;
     padding-right: 1rem;
