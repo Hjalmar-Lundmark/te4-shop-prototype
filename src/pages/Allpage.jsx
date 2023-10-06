@@ -40,7 +40,7 @@ function Allpage() {
         </div>
       </div>
       <ul className='allWares'>
-        {products ? (
+        {products.length > 0 ? (
           <>
             {products.map((item) => (
               <ProductCard
