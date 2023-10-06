@@ -7,7 +7,25 @@
     margin-bottom: 0.5rem;
 }
 
+/*
 .allWares>.card>*>img {
     width: 200px;
     height: 200px;
+}*/
+
+.filter {
+    display: flex;
+    gap: 1rem;
+    background-color: lime;
+    border-radius: 15px;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.5rem;
+}
+
+.filter>button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }

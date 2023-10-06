@@ -24,7 +24,7 @@ function Navbar() {
                         <Link to='/all'><p>Alla varor</p></Link>
                     </li>
                     <li className="nav-item">
-                        <Link to='/'><p>Hundgrejer</p></Link>
+                        <Link to='/all/dog'><p>Hundgrejer</p></Link>
                     </li>
                     <li className="nav-item">
                         <Link to='/'><p>Kattgrejer</p></Link>

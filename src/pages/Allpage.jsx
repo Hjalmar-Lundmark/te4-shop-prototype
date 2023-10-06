@@ -23,7 +23,7 @@ function Allpage() {
 
   return (
     <>
-      <h1>All Products</h1>
+      <h1>Alla produkter</h1>
       <h2>Some kind of filter thing here</h2>
       <ul className='allWares'>
         {products ? (
