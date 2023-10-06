@@ -41,7 +41,7 @@ function Dogpage() {
                         ))}
                     </>
                 ) :
-                    <p>There was an error loading products</p>
+                    <p>Problem med att ladda in produkter</p>
                 }
             </ul>
         </>
