@@ -27,11 +27,11 @@ function Allpage() {
       <h1>Alla produkter</h1>
       <div className="filters">
         <div className='filter'>
-          <p>Hund produkter</p>
+          <p>Hundprodukter</p>
           <button><Link to='/all/dog'>+</Link></button>
         </div>
         <div className='filter'>
-          <p>Katt produkter</p>
+          <p>Kattprodukter</p>
           <button><Link to='/all/cat'>+</Link></button>
         </div>
         <div className='filter'>

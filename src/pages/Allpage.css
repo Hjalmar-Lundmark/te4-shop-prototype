@@ -47,3 +47,10 @@
 .filters>.filter {
     background-color: lightblue;
 }
+
+@media screen and (max-width: 1200px) {
+    .allWares {
+        --grid-placement: auto-fit;
+        grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
+    }
+}
