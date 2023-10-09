@@ -58,7 +58,7 @@ function Homepage() {
           ) : (
             <p>Problem med att ladda in produkter</p>
           )}
-          {/* <ProductCard
+          {/* <ProductCard 
             img='/dog1.jpg'
             name='Produkt'
             price='175'
