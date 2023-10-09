@@ -3,10 +3,6 @@ import { Link } from "react-router-dom"
 function ProductCard(props) {
     let { img, name, price, oldPrice } = props
 
-    // const [cartItems, setCartItems] = useState(() => {
-    //     console.log('please work')
-    //     return JSON.parse(localStorage.getItem('cartItems')) || [];
-    // });
     var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
     const addItem = () => {
@@ -28,16 +24,8 @@ function ProductCard(props) {
             alert('Produkten lades till i varukorgen')
         }
 
-        //setCartItems(newCartItems)
-
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
-
-    // useEffect(() => {
-    //     console.log('useEffect')
-    //     // localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    //     // console.log(cartItems)
-    // }, [cartItems])
 
     return (
         <li className='card'>

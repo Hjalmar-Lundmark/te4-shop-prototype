@@ -1,13 +1,6 @@
 import './Productpage.css'
 
 function Productpage() {
-    // const [cartItems, setCartItems] = useState(() => {
-    //     console.log('please work')
-    //     return JSON.parse(localStorage.getItem('cartItems')) || [];
-    // });
-
-    //const [cartItems, setCartItems] = useState([])
-
     var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
     const addItem = () => {
@@ -29,16 +22,8 @@ function Productpage() {
             alert('Produkten lades till i varukorgen')
         }
 
-        //setCartItems(newCartItems)
-
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
-
-    // useEffect(() => {
-    //     console.log('useEffect')
-    //     // localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    //     // console.log(cartItems)
-    // }, [cartItems])
 
     return (
         <>
@@ -50,7 +35,7 @@ function Productpage() {
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, tempore. Accusamus quo facilis molestias temporibus tempora culpa voluptates sed fugiat ducimus saepe rerum, expedita excepturi nihil optio qui praesentium sint.</p>
                     <p>Pris</p>
                     <p>storlek?</p>
-                    <button onClick={() => { addItem() }}>Lägg i varukorg</button>
+                    <button onClick={() => { document.getElementById('cart').style.display = 'none'; addItem() }}>Lägg i varukorg</button>
                 </div>
             </div>
             <h2>More info down here maybe</h2>
