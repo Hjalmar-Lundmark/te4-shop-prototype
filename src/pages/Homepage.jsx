@@ -43,7 +43,7 @@ function Homepage() {
         <h2>Hundgrejer</h2>
         <p>Vi har alla möjliga halsband, kläder och allt du kan tänka dig för just din hund. </p>
         <ul className='cards'>
-          {dogProducts.length > 0 ? (
+          {/* {dogProducts.length > 0 ? (
             <>
               {dogProducts.map((item) => (
                 <ProductCard
@@ -57,8 +57,8 @@ function Homepage() {
             </>
           ) : (
             <p>Problem med att ladda in produkter</p>
-          )}
-          {/* <ProductCard
+          )} */}
+          <ProductCard
             img='/dog1.jpg'
             name='Produkt'
             price='175'
@@ -82,7 +82,7 @@ function Homepage() {
             img='/dog5.jpg'
             name='Produkt'
             price='200'
-          /> */}
+          />
           <h3 className='moreLink'><Link to='/all/dog'>...</Link></h3>
         </ul>
       </section >
