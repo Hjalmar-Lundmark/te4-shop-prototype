@@ -36,7 +36,7 @@
   --color-bg: white;
   --color-fg: black;
   --color-accent: forestgreen;
-  --color-light: white;
+  --color-card: beige;
 }
 
 body {
@@ -137,33 +137,29 @@ img {
 }
 
 .card {
-  border: 1px solid var(--color-accent);
-  border-radius: 10px;
-  padding: 5px;
+  background-color: var(--color-card);
   margin-right: 0.5rem;
+  border-radius: 20px;
 }
 
 .card>*>img {
   max-height: 220px;
 }
 
-.card>button,
-.productDesc>button {
+.card>*>p {
+  padding-left: 0.5rem;
+}
+
+.card>button {
   background-color: var(--color-accent);
   border: none;
+  border-radius: 20px;
   cursor: pointer;
   padding: 0.5rem;
   color: white;
   font-size: 1rem;
+  width: 100%;
 }
-
-/*
-.cards>.card>*>img {
-  /* TODO: fix img-sizing 
-  width: 183px;
-  height: 183px;
-}
-*/
 
 .moreLink {
   margin-left: 0.5rem;
