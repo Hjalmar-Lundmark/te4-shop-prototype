@@ -15,6 +15,16 @@ function Homepage() {
         setCatProducts(result.data.filter(item => item.categoryId === 2))
         setOtherProducts(result.data.filter(item => item.categoryId === 3))
 
+        // test later
+        if (dogProducts.length > 5) {
+          setDogProducts(getFirstFive(dogProducts))
+        }
+        if (catProducts.length > 5) {
+          setCatProducts(getFirstFive(catProducts))
+        }
+        if (otherProducts.length > 5) {
+          setOtherProducts(getFirstFive(otherProducts))
+        }
         // setDogProducts(getFirstFive(result.data.filter(item => item.categoryId === 2)))
         // setCatProducts(getFirstFive(result.data.filter(item => item.categoryId === 1)))
         // setOtherProducts(getFirstFive(result.data.filter(item => item.categoryId === 3)))
