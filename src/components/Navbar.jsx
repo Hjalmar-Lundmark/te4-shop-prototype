@@ -9,7 +9,7 @@ function Navbar() {
         <nav className='navbar'>
             <div className="autoWidth">
                 <div className='nav'>
-                    <Link to='/'><img src="FF.png" alt="logo" /></Link>
+                    <Link to='/'><img src="../../public/FF.png" alt="logo" /></Link>
                     <div className='nav-items'>
                         <div className='searchArea'>
                             <input type="text" placeholder='Sök bland produkter' className='searchField' />
