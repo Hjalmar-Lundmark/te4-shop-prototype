@@ -11,9 +11,13 @@ function Homepage() {
     await fetch(`http://localhost:3000`)
       .then(res => res.json())
       .then(result => {
-        setDogProducts(getFirstFive(result.data.filter(item => item.categoryId === 2)))
-        setCatProducts(getFirstFive(result.data.filter(item => item.categoryId === 1)))
-        setOtherProducts(getFirstFive(result.data.filter(item => item.categoryId === 3)))
+        setDogProducts(result.data.filter(item => item.categoryId === 1))
+        setCatProducts(result.data.filter(item => item.categoryId === 2))
+        setOtherProducts(result.data.filter(item => item.categoryId === 3))
+
+        // setDogProducts(getFirstFive(result.data.filter(item => item.categoryId === 2)))
+        // setCatProducts(getFirstFive(result.data.filter(item => item.categoryId === 1)))
+        // setOtherProducts(getFirstFive(result.data.filter(item => item.categoryId === 3)))
       }).catch(err => {
         console.log(err)
       });
