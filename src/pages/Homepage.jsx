@@ -11,19 +11,23 @@ function Homepage() {
     await fetch(`http://localhost:3000`)
       .then(res => res.json())
       .then(result => {
-        setDogProducts(result.data.filter(item => item.categoryId === 1))
-        setCatProducts(result.data.filter(item => item.categoryId === 2))
-        setOtherProducts(result.data.filter(item => item.categoryId === 3))
+        var dogProductsTemp = (result.data.filter(item => item.categories[0].categoryId === 1))
+        var catProductsTemp = (result.data.filter(item => item.categories[0].categoryId === 2))
+        var otherProductsTemp = (result.data.filter(item => item.categories[0].categoryId === 3))
+
+        setDogProducts(dogProductsTemp)
+        setCatProducts(catProductsTemp)
+        setOtherProducts(otherProductsTemp)
 
         // test later
-        if (dogProducts.length > 5) {
-          setDogProducts(getFirstFive(dogProducts))
+        if (dogProductsTemp.length > 5) {
+          setDogProducts(getFirstFive(dogProductsTemp))
         }
-        if (catProducts.length > 5) {
-          setCatProducts(getFirstFive(catProducts))
+        if (catProductsTemp.length > 5) {
+          setCatProducts(getFirstFive(catProductsTemp))
         }
-        if (otherProducts.length > 5) {
-          setOtherProducts(getFirstFive(otherProducts))
+        if (otherProductsTemp.length > 5) {
+          setOtherProducts(getFirstFive(otherProductsTemp))
         }
         // setDogProducts(getFirstFive(result.data.filter(item => item.categoryId === 2)))
         // setCatProducts(getFirstFive(result.data.filter(item => item.categoryId === 1)))
@@ -57,7 +61,7 @@ function Homepage() {
         <h2>Hundgrejer</h2>
         <p>Vi har alla möjliga halsband, kläder och allt du kan tänka dig för just din hund. </p>
         <ul className='cards'>
-          {/* {dogProducts.length > 0 ? (
+          {dogProducts.length > 0 ? (
             <>
               {dogProducts.map((item) => (
                 <ProductCard
@@ -71,8 +75,8 @@ function Homepage() {
             </>
           ) : (
             <p>Problem med att ladda in produkter</p>
-          )} */}
-          <ProductCard
+          )}
+          {/* <ProductCard
             img='/dog1.jpg'
             name='Produkt'
             price='175'
@@ -96,7 +100,7 @@ function Homepage() {
             img='/dog5.jpg'
             name='Produkt'
             price='200'
-          />
+          /> */}
           <h3 className='moreLink'><Link to='/all/dog'>...</Link></h3>
         </ul>
       </section >

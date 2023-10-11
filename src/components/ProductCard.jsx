@@ -29,7 +29,7 @@ function ProductCard(props) {
 
     return (
         <li className='card'>
-            <Link to='/product'>
+            <Link to={`/product/${props.id}`}>
                 <img src={img} alt={name} />
                 <p>
                     {name} <br />

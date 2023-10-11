@@ -9,7 +9,7 @@ function Otherpage() {
         await fetch(`http://localhost:3000`)
             .then(res => res.json())
             .then(result => {
-                result.data = result.data.filter(item => item.categoryId === 3)
+                result.data = result.data.filter(item => item.categories[0].categoryId === 3)
                 setProducts(result.data);
             }).catch(err => {
                 console.log(err)

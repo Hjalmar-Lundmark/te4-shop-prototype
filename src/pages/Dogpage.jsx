@@ -9,7 +9,7 @@ function Dogpage() {
         await fetch(`http://localhost:3000`)
             .then(res => res.json())
             .then(result => {
-                result.data = result.data.filter(item => item.categoryId === 2)
+                result.data = result.data.filter(item => item.categories[0].categoryId === 1)
                 setProducts(result.data);
             }).catch(err => {
                 console.log(err)

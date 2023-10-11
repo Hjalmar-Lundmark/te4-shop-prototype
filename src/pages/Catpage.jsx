@@ -9,7 +9,7 @@ function Catpage() {
         await fetch(`http://localhost:3000`)
             .then(res => res.json())
             .then(result => {
-                result.data = result.data.filter(item => item.categoryId === 1)
+                result.data = result.data.filter(item => item.categories[0].categoryId === 2)
                 setProducts(result.data);
             }).catch(err => {
                 console.log(err)
