@@ -19,7 +19,6 @@ function Homepage() {
         setCatProducts(catProductsTemp)
         setOtherProducts(otherProductsTemp)
 
-        // test later
         if (dogProductsTemp.length > 5) {
           setDogProducts(getFirstFive(dogProductsTemp))
         }
@@ -29,9 +28,6 @@ function Homepage() {
         if (otherProductsTemp.length > 5) {
           setOtherProducts(getFirstFive(otherProductsTemp))
         }
-        // setDogProducts(getFirstFive(result.data.filter(item => item.categoryId === 2)))
-        // setCatProducts(getFirstFive(result.data.filter(item => item.categoryId === 1)))
-        // setOtherProducts(getFirstFive(result.data.filter(item => item.categoryId === 3)))
       }).catch(err => {
         console.log(err)
       });
