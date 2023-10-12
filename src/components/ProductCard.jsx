@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 function ProductCard(props) {
-    let { img, name, price, oldPrice } = props
+    let { id, img, name, price, oldPrice } = props
 
     var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
@@ -10,18 +10,15 @@ function ProductCard(props) {
         cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
         let newCartItems
-        if (cartItems.length > 0) {
-            newCartItems = [...cartItems, { id: cartItems[cartItems.length - 1].id + 1, name: 'placeholder' }]
-        } else {
-            newCartItems = [...cartItems, { id: 0, name: 'placeholder' }]
-        }
+        newCartItems = [...cartItems, { id: id, name: name, img: img, price: price }]
+
 
         console.log(cartItems)
         console.log(newCartItems)
         if (cartItems === newCartItems) {
             alert('Något gick fel, försök igen')
         } else {
-            alert('Produkten lades till i varukorgen')
+            alert(name + ' lades till i varukorgen')
         }
 
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
@@ -29,7 +26,7 @@ function ProductCard(props) {
 
     return (
         <li className='card'>
-            <Link to={`/product/${props.id}`}>
+            <Link to={`/product/${id}`}>
                 <img src={img} alt={name} />
                 <p>
                     {name} <br />
