@@ -3,12 +3,12 @@ import { useParams } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
 
 function Searchpage() {
-    const { searchProducts, setSearchProducts } = useState([])
+    const [searchProducts, setSearchProducts] = useState([])
     const { value } = useParams()
 
-    function fetchSearch() {
+    async function fetchSearch() {
         console.log(value)
-        fetch(`http://localhost:3000/product/search/${value}`)
+        await fetch(`http://localhost:3000/product/search/${value}`)
             .then(res => res.json())
             .then(result => {
                 console.log(result)
@@ -26,13 +26,13 @@ function Searchpage() {
         <>
             <h1>Searchpage</h1>
             <ul className='allWares'>
-                {searchProducts.length > 0 ? (
+                {searchProducts ? (
                     <>
                         {searchProducts.map((item) => (
                             <ProductCard
                                 key={item.id}
                                 id={item.id}
-                                img={'../' + item.image}
+                                img={'../../' + item.image}
                                 name={item.name}
                                 price={item.price}
                                 oldPrice={item.oldPrice}

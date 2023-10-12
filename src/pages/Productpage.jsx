@@ -7,8 +7,8 @@ function Productpage() {
     const { id } = useParams()
     const [product, setProduct] = useState([])
 
-    function fetchProduct() {
-        fetch(`http://localhost:3000/product/${id}`)
+    async function fetchProduct() {
+        await fetch(`http://localhost:3000/product/${id}`)
             .then(res => res.json())
             .then(result => {
                 console.log(result)
