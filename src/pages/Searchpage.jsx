@@ -20,7 +20,7 @@ function Searchpage() {
 
     useEffect(() => {
         fetchSearch()
-    }, [])
+    }, [value])
 
     return (
         <>
