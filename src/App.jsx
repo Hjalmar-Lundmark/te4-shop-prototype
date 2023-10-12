@@ -20,7 +20,7 @@ function App() {
           <div className='autoWidth flow'>
             <Routes>
               <Route path="/" element={<Homepage />} />
-              <Route path="/product" element={<Productpage />} />
+              <Route path="/product/:id" element={<Productpage />} />
               <Route path="/all" element={<Allpage />} />
               <Route path="/all/dog" element={<Dogpage />} />
               <Route path="/all/cat" element={<Catpage />} />

@@ -47,7 +47,7 @@ function Homepage() {
 
   return (
     <>
-      <Link to='/product'>
+      <Link to='/product/16'>
         <header className='hero'>
           <img src='canDog.jpg' alt='pic' />
           <h1>Ny vara! Köp nu!</h1>
