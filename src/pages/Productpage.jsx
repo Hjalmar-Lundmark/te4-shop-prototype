@@ -19,15 +19,16 @@ function Productpage() {
     }
 
     const addItem = () => {
-        // TODO: get name from somewhere
         cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
         let newCartItems
-        if (cartItems.length > 0) {
-            newCartItems = [...cartItems, { id: cartItems[cartItems.length - 1].id + 1, name: 'placeholder' }]
-        } else {
-            newCartItems = [...cartItems, { id: 0, name: 'placeholder' }]
+
+        if (cartItems.find(item => item.id === id)) {
+            console.log('Produkten finns redan i varukorgen')   //TODO
+            //return
         }
+
+        newCartItems = [...cartItems, { id: id, name: product.name, img: product.image, price: product.price }]
 
         console.log(cartItems)
         console.log(newCartItems)
@@ -51,11 +52,12 @@ function Productpage() {
                 <img className='productImg' src={`../../${product.image}`} alt="" />
                 <div className="productDesc">
                     <h2>{product.name}</h2>
-                    {product.brand ? (<h3>Gjort av {product.brand.name}</h3>) : (<></>)}
+                    {product.brand ? (<h3>Gjord av {product.brand.name}</h3>) : (<></>)}
                     <p>{product.description}</p>
                     <p>
                         {product.oldPrice ? (<><s>{product.oldPrice} kr</s><br /></>) : (<br />)}
-                        {product.price} kr</p>
+                        {product.price} kr
+                    </p>
                     <p>I lager {product.inStock} st </p>
                     <button onClick={() => { document.getElementById('cart').style.display = 'none'; addItem() }}>Lägg i varukorg</button>
                 </div>

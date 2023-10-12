@@ -9,6 +9,7 @@ import Dogpage from './pages/Dogpage'
 import Catpage from './pages/Catpage'
 import Otherpage from './pages/Otherpage'
 import Checkoutpage from './pages/Checkoutpage'
+import Searchpage from './pages/Searchpage'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
               <Route path="/all/dog" element={<Dogpage />} />
               <Route path="/all/cat" element={<Catpage />} />
               <Route path="/all/other" element={<Otherpage />} />
+              <Route path="/all/search/:value" element={<Searchpage />} />
               <Route path="/checkout" element={<Checkoutpage />} />
             </Routes>
           </div>

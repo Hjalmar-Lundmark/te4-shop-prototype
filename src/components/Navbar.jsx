@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import Cart from './Cart';
+import Search from './Search';
 
 function Navbar() {
 
@@ -11,10 +12,7 @@ function Navbar() {
                 <div className='nav'>
                     <Link to='/'><img src="../../FF.png" alt="logo" /></Link>
                     <div className='nav-items'>
-                        <div className='searchArea'>
-                            <input type="text" placeholder='Sök bland produkter' className='searchField' />
-                            <button><h3 className='navBtn'>Sök</h3></button>
-                        </div>
+                        <Search />
                         <Cart />
                     </div>
                 </div>

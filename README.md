@@ -5,7 +5,7 @@
 2. Googla snyggare varukorg
 3. Sätt alla bilder till samma bredd-höjd
 
-4. Reversa items på framsidan?
+5. Custom popup för när vara stoppas i korgen
 
 ## Att göra backend
 1. Få mer från databas
