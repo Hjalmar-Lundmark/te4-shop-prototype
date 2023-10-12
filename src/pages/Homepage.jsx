@@ -62,6 +62,7 @@ function Homepage() {
               {dogProducts.map((item) => (
                 <ProductCard
                   key={item.id}
+                  id={item.id}
                   img={item.image}
                   name={item.name}
                   price={item.price}
@@ -109,6 +110,7 @@ function Homepage() {
               {catProducts.map((item) => (
                 <ProductCard
                   key={item.id}
+                  id={item.id}
                   img={item.image}
                   name={item.name}
                   price={item.price}
@@ -131,6 +133,7 @@ function Homepage() {
               {otherProducts.map((item) => (
                 <ProductCard
                   key={item.id}
+                  id={item.id}
                   img={item.image}
                   name={item.name}
                   price={item.price}

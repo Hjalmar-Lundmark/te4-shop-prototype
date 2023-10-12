@@ -33,6 +33,7 @@ function Catpage() {
                         {products.map((item) => (
                             <ProductCard
                                 key={item.id}
+                                id={item.id}
                                 img={'../' + item.image}
                                 name={item.name}
                                 price={item.price}
