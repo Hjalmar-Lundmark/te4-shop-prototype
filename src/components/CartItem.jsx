@@ -6,6 +6,7 @@ function CartItem(props) {
             <img src={img} alt="" />
             <h3>{name}</h3>
             <p>{price} kr</p>
+            <p>1st</p>
             <button onClick={() => { props.deleteItem(id); }}>Ta bort</button>
         </div>
     )

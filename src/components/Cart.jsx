@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Cart.css'
 import CartItem from './CartItem'
 import { PiShoppingCartSimpleDuotone } from 'react-icons/pi';
@@ -63,7 +64,7 @@ function Cart() {
                     <button onClick={() => { deleteAll() }}>Töm korgen</button>
                     <div className='cartBtns'>
                         <p>4000 kr</p>
-                        <button>Gå till kassan</button>
+                        <Link to='/checkout'><button onClick={() => (document.getElementById('cart').style.display = 'none')}>Gå till kassan</button></Link>
                     </div>
                 </div>
             </div>

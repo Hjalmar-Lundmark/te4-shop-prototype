@@ -1,11 +1,11 @@
 .cart {
     background-color: var(--color-bg);
     position: absolute;
-    width: 450px;
+    width: 500px;
     height: auto;
     border: 2px solid var(--color-fg);
-    margin-top: 320px;
-    margin-left: -145px;
+    margin-top: 400px;
+    margin-left: -200px;
     padding: 1rem;
 
     display: none;
@@ -45,6 +45,7 @@
     margin: 0 0.5rem 0 0;
 }
 
+.cartBtns>*>button,
 .cartBtns>button,
 .item>button {
     background-color: var(--color-accent);

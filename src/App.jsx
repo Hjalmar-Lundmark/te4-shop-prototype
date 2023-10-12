@@ -8,6 +8,7 @@ import Allpage from './pages/Allpage'
 import Dogpage from './pages/Dogpage'
 import Catpage from './pages/Catpage'
 import Otherpage from './pages/Otherpage'
+import Checkoutpage from './pages/Checkoutpage'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
               <Route path="/all/dog" element={<Dogpage />} />
               <Route path="/all/cat" element={<Catpage />} />
               <Route path="/all/other" element={<Otherpage />} />
+              <Route path="/checkout" element={<Checkoutpage />} />
             </Routes>
           </div>
         </main>
