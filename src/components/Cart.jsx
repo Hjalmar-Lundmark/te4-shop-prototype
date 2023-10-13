@@ -30,7 +30,7 @@ function Cart() {
         console.log('useEffect')
         let price = 0
         for (let i = 0; i < cartItems.length; i++) {
-            price += cartItems[i].price
+            price += (cartItems[i].price * cartItems[i].amount)
         }
         setTotalPrice(price)
     }, [cartItems])
@@ -57,6 +57,7 @@ function Cart() {
                             deleteItem={deleteItem}
                             img={item.img}
                             price={item.price}
+                            amount={item.amount}
                         />
                     )}
                 </div>

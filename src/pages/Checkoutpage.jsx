@@ -14,7 +14,7 @@ function Checkoutpage() {
         let price = 0
         let items = 0
         for (let i = 0; i < cartItems.length; i++) {
-            price += cartItems[i].price
+            price += (cartItems[i].price * cartItems[i].amount)
             items += 1
         }
         setTotalPrice(price)
@@ -35,6 +35,7 @@ function Checkoutpage() {
                         //deleteItem={deleteItem}
                         img={item.img}
                         price={item.price}
+                        amount={item.amount}
                     />
                 )}
             </div>

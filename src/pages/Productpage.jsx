@@ -20,15 +20,19 @@ function Productpage() {
 
     const addItem = () => {
         cartItems = JSON.parse(localStorage.getItem('cartItems'));
-
         let newCartItems
 
         if (cartItems.find(item => item.id === id)) {
-            console.log('Produkten finns redan i varukorgen')   //TODO
-            //return
+            console.log('Produkten finns redan i varukorgen')
+            newCartItems = cartItems.map(item => {
+                if (item.id === id) {
+                    item.amount += 1
+                }
+                return item
+            })
+        } else {
+            newCartItems = [...cartItems, { id: id, name: product.name, img: product.image, price: product.price, amount: 1 }]
         }
-
-        newCartItems = [...cartItems, { id: id, name: product.name, img: product.image, price: product.price }]
 
         console.log(cartItems)
         console.log(newCartItems)
