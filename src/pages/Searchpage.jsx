@@ -24,7 +24,7 @@ function Searchpage() {
 
     return (
         <>
-            <h1>Searchpage</h1>
+            <h1>Sökresultat</h1>
             <ul className='allWares'>
                 {searchProducts ? (
                     <>
