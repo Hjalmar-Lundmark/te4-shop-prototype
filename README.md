@@ -3,6 +3,7 @@
 ## Att göra (frontend)
 2. Googla snyggare varukorg
 5. Custom popup för när vara stoppas i korgen
+3. Bättre mobilanpassning
 
 ## Att göra backend
 4. Varukorg kan ha 2 av en produkt istället för produkten 2 ggr

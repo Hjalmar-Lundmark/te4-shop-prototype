@@ -1,11 +1,11 @@
 .cart {
     background-color: var(--color-bg);
     position: absolute;
-    width: 500px;
+    width: 550px;
     height: auto;
     border: 2px solid var(--color-fg);
     margin-top: 400px;
-    margin-left: -200px;
+    margin-left: -295px;
     padding: 1rem;
 
     display: none;
@@ -33,6 +33,7 @@
 
 .item>h3 {
     margin: 0;
+    max-width: 225px;
 }
 
 .cartBtns {
