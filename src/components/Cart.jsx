@@ -9,15 +9,15 @@ function Cart() {
         console.log('please work')
         return JSON.parse(localStorage.getItem('cartItems')) || [];
     });
-    //var cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const deleteItem = (id) => {
-        //cartItems = JSON.parse(localStorage.getItem('cartItems'));
         setCartItems(JSON.parse(localStorage.getItem('cartItems')))
 
         console.log(id)
         const newCartItems = cartItems.filter(item => item.id !== id)
-        setCartItems(newCartItems) // aaaaaaaaaaaaaaaa
+        setCartItems(newCartItems)
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
 
@@ -26,13 +26,13 @@ function Cart() {
         localStorage.setItem('cartItems', JSON.stringify([]));
     }
 
-    // AddItem moved to Productpage.jsx + ProductCard.jsx, since it's only used there
-
-    // yeah idk
     useEffect(() => {
         console.log('useEffect')
-        // localStorage.setItem('cartItems', JSON.stringify(cartItems));
-        // console.log(cartItems)
+        let price = 0
+        for (let i = 0; i < cartItems.length; i++) {
+            price += cartItems[i].price
+        }
+        setTotalPrice(price)
     }, [cartItems])
 
     function flipCart() {
@@ -63,7 +63,7 @@ function Cart() {
                 <div className='cartBtns'>
                     <button onClick={() => { deleteAll() }}>Töm korgen</button>
                     <div className='cartBtns'>
-                        <p>4000 kr</p>
+                        <p>{totalPrice} kr</p>
                         <Link to='/checkout'><button onClick={() => (document.getElementById('cart').style.display = 'none')}>Gå till kassan</button></Link>
                     </div>
                 </div>
