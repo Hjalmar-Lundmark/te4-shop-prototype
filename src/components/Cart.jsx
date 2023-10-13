@@ -53,10 +53,10 @@ function Cart() {
                         <CartItem
                             key={index}
                             id={item.id}
-                            name={item.name || 'Product'} // where should I get these from?
+                            name={item.name}
                             deleteItem={deleteItem}
-                            img={item.img || 'dog5.jpg'}
-                            price={item.price || 100}
+                            img={item.img}
+                            price={item.price}
                         />
                     )}
                 </div>
