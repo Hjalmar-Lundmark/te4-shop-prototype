@@ -47,7 +47,6 @@ function Productpage() {
 
     return (
         <>
-            <h1>Produkt sida {id}</h1>
             <div className="product">
                 <img className='productImg' src={`../../${product.image}`} alt="" />
                 <div className="productDesc">
