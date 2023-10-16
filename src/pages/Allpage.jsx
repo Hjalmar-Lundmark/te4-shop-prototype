@@ -10,7 +10,6 @@ function Allpage() {
     await fetch(`http://localhost:3000`)
       .then(res => res.json())
       .then(result => {
-        console.log(result.data)
         setProducts(result.data)
       }).catch(err => {
         console.log(err)

@@ -30,8 +30,29 @@ function Checkoutpage() {
         localStorage.setItem('cartItems', JSON.stringify([]));
     }
 
+    // maybe fetch cart items from backend instead of localStorage?
+    async function fetchProduct() {
+        let items = []
+
+        for (let i = 0; i < cartItems.length; i++) {
+            await fetch(`http://localhost:3000/product/${cartItems[i].id}`)
+                .then(res => res.json())
+                .then(result => {
+                    console.log(result.data[0])
+                    items.push(result.data[0])
+                    console.log(items)
+                }).catch(err => {
+                    console.log(err)
+                });
+        }
+
+        // setCartItems(items) 
+        // localStorage.setItem('cartItems', JSON.stringify(items));
+    }
+
     useEffect(() => {
         setCartItems(JSON.parse(localStorage.getItem('cartItems')))
+        fetchProduct()
     }, [])
 
     useEffect(() => {
@@ -44,8 +65,6 @@ function Checkoutpage() {
         setTotalPrice(price)
         setTotalItems(items)
     }, [cartItems])
-
-    // maybe fetch cart items from backend instead of localStorage?
 
     return (
         <>

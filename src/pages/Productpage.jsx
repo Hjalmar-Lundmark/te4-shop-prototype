@@ -11,7 +11,6 @@ function Productpage() {
         await fetch(`http://localhost:3000/product/${id}`)
             .then(res => res.json())
             .then(result => {
-                console.log(result)
                 setProduct(result.data[0])
             }).catch(err => {
                 console.log(err)

@@ -6,7 +6,6 @@ import { PiShoppingCartSimpleDuotone } from 'react-icons/pi';
 
 function Cart() {
     const [cartItems, setCartItems] = useState(() => {
-        console.log('please work')
         return JSON.parse(localStorage.getItem('cartItems')) || [];
     });
 
@@ -15,7 +14,6 @@ function Cart() {
     const deleteItem = (id) => {
         setCartItems(JSON.parse(localStorage.getItem('cartItems')))
 
-        console.log(id)
         const newCartItems = cartItems.filter(item => item.id !== id)
         setCartItems(newCartItems)
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
@@ -27,7 +25,6 @@ function Cart() {
     }
 
     useEffect(() => {
-        console.log('useEffect')
         let price = 0
         for (let i = 0; i < cartItems.length; i++) {
             price += (cartItems[i].price * cartItems[i].amount)
