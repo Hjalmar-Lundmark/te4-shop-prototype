@@ -31,6 +31,7 @@ function Checkoutpage() {
     }
 
     // maybe fetch cart items from backend instead of localStorage?
+    // does not work
     async function fetchProduct() {
         let items = []
 

@@ -6,7 +6,7 @@
 3. Bättre mobilanpassning
 
 ## Att göra - backend
-1. Fixa knappar i checkout
+1. Fixa Fetch i checkout
 3. Säkra databas bättre?
 5. Take och skip i db?
 
