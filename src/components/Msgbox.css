@@ -1,8 +1,10 @@
 #msgbox {
     position: fixed;
-    right: 40%;
+    right: 38%;
+    left: 38%;
     bottom: 2vmin;
     min-width: 16rem;
+    text-align: center;
 }
 
 #msgbox>p {
