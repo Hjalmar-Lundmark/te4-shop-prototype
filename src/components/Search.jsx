@@ -14,7 +14,7 @@ function Search() {
 
     return (
         <form className='searchArea' onSubmit={handleSearch} >
-            <input type="text" placeholder='Sök bland produkter' className='searchField' ref={searchInput} />
+            <input type="search" placeholder='Sök bland produkter' className='searchField' ref={searchInput} />
             <button><h3 className='navBtn'>Sök</h3></button>
         </form>
     )
