@@ -24,12 +24,24 @@ function ProductCard(props) {
         console.log(cartItems)
         console.log(newCartItems)
         if (cartItems === newCartItems) {
-            alert('Något gick fel, försök igen')
+            message('Något gick fel, försök igen', 'warning')
         } else {
-            alert(name + ' lades till i varukorgen')
+            message(name + ' lades till i varukorgen', 'success')
         }
 
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
+    }
+
+    function message(text, type) {
+        const msgbox = document.querySelector('#msgbox');
+
+        const p = document.createElement('p');
+        p.classList.add(type);
+        p.textContent = text;
+        msgbox.appendChild(p);
+        setTimeout(() => {
+            p.parentNode.removeChild(p);
+        }, 2500);
     }
 
     return (

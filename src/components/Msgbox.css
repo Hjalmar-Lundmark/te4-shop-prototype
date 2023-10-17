@@ -1,6 +1,6 @@
 #msgbox {
     position: fixed;
-    right: 2vmin;
+    right: 40%;
     bottom: 2vmin;
     min-width: 16rem;
 }
@@ -8,4 +8,13 @@
 #msgbox>p {
     margin-bottom: 0.2rem;
     padding: 1rem;
+}
+
+.warning {
+    background-color: red;
+}
+
+.success {
+    background-color: lightgreen;
+    border-radius: 20px;
 }

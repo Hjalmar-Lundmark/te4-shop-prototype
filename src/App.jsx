@@ -10,6 +10,7 @@ import Catpage from './pages/Catpage'
 import Otherpage from './pages/Otherpage'
 import Checkoutpage from './pages/Checkoutpage'
 import Searchpage from './pages/Searchpage'
+import Msgbox from './components/Msgbox'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           </div>
         </main>
         <Footer />
+        <Msgbox />
       </BrowserRouter>
     </>
   )
