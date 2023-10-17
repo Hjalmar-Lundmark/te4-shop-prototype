@@ -1,5 +1,5 @@
-import { useRef, useState } from "react"
-import { redirect, useNavigate } from "react-router-dom"
+import { useRef } from "react"
+import { useNavigate } from "react-router-dom"
 
 function Search() {
     const searchInput = useRef(null)
