@@ -13,8 +13,19 @@ function Cart() {
 
     const deleteItem = (id) => {
         setCartItems(JSON.parse(localStorage.getItem('cartItems')))
+        var newCartItems
 
-        const newCartItems = cartItems.filter(item => item.id !== id)
+        if (cartItems.find(item => item.id === id && item.amount > 1)) {
+            newCartItems = cartItems.map(item => {
+                if (item.id === id && item.amount > 1) {
+                    item.amount -= 1
+                }
+                return item
+            })
+        } else {
+            newCartItems = cartItems.filter(item => item.id !== id)
+        }
+
         setCartItems(newCartItems)
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
     }
