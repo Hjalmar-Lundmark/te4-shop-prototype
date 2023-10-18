@@ -1,4 +1,5 @@
 # Webbshop för djurkläder
+Branch för min lösning utan att använda ```useContext```.
 
 ## Att göra - frontend
 1. Googla snyggare varukorg
