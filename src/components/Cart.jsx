@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import './Cart.css'
 import CartItem from './CartItem'
 import { PiShoppingCartSimpleDuotone } from 'react-icons/pi';
@@ -8,6 +8,7 @@ function Cart() {
     const [cartItems, setCartItems] = useState(() => {
         return JSON.parse(localStorage.getItem('cartItems')) || [];
     });
+    const location = useLocation();
 
     const [totalPrice, setTotalPrice] = useState(0)
 
@@ -44,6 +45,10 @@ function Cart() {
     }, [cartItems])
 
     function flipCart() {
+        if (location.pathname === '/checkout') {
+            return document.getElementById('cart').style.display = 'none'
+        }
+
         if (document.getElementById('cart').style.display === 'block') {
             document.getElementById('cart').style.display = 'none'
         } else {
