@@ -10,48 +10,6 @@ function Cart() {
     const { cartItems, totalPrice, deleteItem, deleteAll, flipCart } = cart;
     const location = useLocation();
 
-    // const [cartItems, setCartItems] = useState(() => {
-    //     return JSON.parse(localStorage.getItem('cartItems')) || [];
-    // });
-
-    // const [totalPrice, setTotalPrice] = useState(0)
-
-    // const deleteItem = (id) => {
-    //     setCartItems(JSON.parse(localStorage.getItem('cartItems')))
-    //     var newCartItems
-
-    //     if (cartItems.find(item => item.id === id && item.amount > 1)) {
-    //         newCartItems = cartItems.map(item => {
-    //             if (item.id === id && item.amount > 1) {
-    //                 item.amount -= 1
-    //             }
-    //             return item
-    //         })
-    //     } else {
-    //         newCartItems = cartItems.filter(item => item.id !== id)
-    //     }
-
-    //     setCartItems(newCartItems)
-    //     localStorage.setItem('cartItems', JSON.stringify(newCartItems));
-    // }
-
-    // const deleteAll = () => {
-    //     setCartItems([]);
-    //     localStorage.setItem('cartItems', JSON.stringify([]));
-    // }
-
-    // function flipCart() {
-    //     if (location.pathname === '/checkout') {
-    //         return document.getElementById('cart').style.display = 'none'
-    //     }
-
-    //     if (document.getElementById('cart').style.display === 'block') {
-    //         document.getElementById('cart').style.display = 'none'
-    //     } else {
-    //         document.getElementById('cart').style.display = 'block'
-    //     }
-    // }
-
     return (
         <>
             <button onClick={() => { flipCart(location); }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
