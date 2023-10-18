@@ -152,6 +152,7 @@ img {
 
 .card>*>p {
   padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .card>button {

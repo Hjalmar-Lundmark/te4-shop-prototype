@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 function ProductCard(props) {
-    let { id, img, name, price, oldPrice } = props
+    let { id, img, name, price, oldPrice, brand } = props
 
     var cartItems = JSON.parse(localStorage.getItem('cartItems'));
 
@@ -49,7 +49,7 @@ function ProductCard(props) {
             <Link to={`/product/${id}`}>
                 <img src={img} alt={name} />
                 <p>
-                    {name} <br />
+                    {name} - {brand} <br />
                     {oldPrice ? (<><s>{oldPrice} kr</s><br /></>) : (<br />)}
                     {price} kr
                 </p>

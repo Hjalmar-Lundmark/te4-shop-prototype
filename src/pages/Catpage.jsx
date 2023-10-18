@@ -36,6 +36,7 @@ function Catpage() {
                                 id={item.id}
                                 img={'../' + item.image}
                                 name={item.name}
+                                brand={item.brand.name}
                                 price={item.price}
                                 oldPrice={item.oldPrice}
                             />
