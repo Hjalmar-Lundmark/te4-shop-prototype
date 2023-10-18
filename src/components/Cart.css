@@ -11,7 +11,7 @@
     display: none;
 }
 
-.cart>h2 {
+.cart>*>h2 {
     margin: 0;
 }
 

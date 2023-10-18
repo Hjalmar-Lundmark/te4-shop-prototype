@@ -60,7 +60,10 @@ function Cart() {
         <>
             <button onClick={() => { flipCart(); setCartItems(JSON.parse(localStorage.getItem('cartItems'))) }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
             <div className="cart" id='cart'>
-                <h2>Varukorg</h2>
+                <div className='cartBtns'>
+                    <h2>Varukorg</h2>
+                    <button onClick={() => { flipCart() }}>X</button>
+                </div>
                 <div className='items'>
                     {cartItems.map((item, index) =>
                         <CartItem
