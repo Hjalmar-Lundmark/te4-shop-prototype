@@ -6,9 +6,10 @@ import { PiShoppingCartSimpleDuotone } from 'react-icons/pi';
 import { CartContext } from "../context/cartContextProvider";
 
 function Cart() {
-    const [cartItems, setCartItems] = useState([])
+    const { deleteItem, deleteAll, flipCart, cartItems } = useContext(CartContext)
+    const [cartItems2, setCartItems] = useState(cartItems || []);
     const [totalPrice, setTotalPrice] = useState(0)
-    const { deleteItem, deleteAll, flipCart } = useContext(CartContext)
+
 
     const location = useLocation();
 
@@ -19,6 +20,12 @@ function Cart() {
         }
         setTotalPrice(price)
     }, [cartItems])
+
+    useEffect(() => {
+        setCartItems(JSON.parse(localStorage.getItem('cartItems')))
+        console.log(cartItems)
+        console.log(cartItems2)
+    }, [])
 
     // const [cartItems, setCartItems] = useState(() => {
     //     return JSON.parse(localStorage.getItem('cartItems')) || [];
