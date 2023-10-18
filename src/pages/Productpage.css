@@ -22,3 +22,17 @@
     color: white;
     font-size: 1rem;
 }
+
+@media screen and (max-width: 700px) {
+    .product {
+        flex-direction: column;
+    }
+
+    .productImg {
+        width: 100%;
+    }
+
+    .productDesc {
+        width: 90%;
+    }
+}

@@ -2,7 +2,6 @@
 
 ## Att göra - frontend
 1. Googla snyggare varukorg
-5. Custom popup för när vara stoppas i korgen
 3. Bättre mobilanpassning
 
 ## Att göra - backend

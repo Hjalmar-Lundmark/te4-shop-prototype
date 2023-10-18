@@ -56,3 +56,10 @@
         grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
     }
 }
+
+@media screen and (max-width: 700px) {
+    .filters {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
