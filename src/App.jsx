@@ -11,30 +11,33 @@ import Otherpage from './pages/Otherpage'
 import Checkoutpage from './pages/Checkoutpage'
 import Searchpage from './pages/Searchpage'
 import Msgbox from './components/Msgbox'
+import { CartContextProvider } from './context/cartContextProvider'
 
 function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <main>
-          <Navbar />
-          <div className='autoWidth flow'>
-            <Routes>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/product/:id" element={<Productpage />} />
-              <Route path="/all" element={<Allpage />} />
-              <Route path="/all/dog" element={<Dogpage />} />
-              <Route path="/all/cat" element={<Catpage />} />
-              <Route path="/all/other" element={<Otherpage />} />
-              <Route path="/all/search/:value" element={<Searchpage />} />
-              <Route path="/checkout" element={<Checkoutpage />} />
-            </Routes>
-          </div>
-        </main>
-        <Footer />
-        <Msgbox />
-      </BrowserRouter>
+      <CartContextProvider>
+        <BrowserRouter>
+          <main>
+            <Navbar />
+            <div className='autoWidth flow'>
+              <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/product/:id" element={<Productpage />} />
+                <Route path="/all" element={<Allpage />} />
+                <Route path="/all/dog" element={<Dogpage />} />
+                <Route path="/all/cat" element={<Catpage />} />
+                <Route path="/all/other" element={<Otherpage />} />
+                <Route path="/all/search/:value" element={<Searchpage />} />
+                <Route path="/checkout" element={<Checkoutpage />} />
+              </Routes>
+            </div>
+          </main>
+          <Footer />
+          <Msgbox />
+        </BrowserRouter>
+      </CartContextProvider>
     </>
   )
 }

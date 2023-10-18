@@ -1,68 +1,22 @@
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Cart.css'
 import CartItem from './CartItem'
 import { PiShoppingCartSimpleDuotone } from 'react-icons/pi';
+import { CartContext } from "../context/cartContextProvider";
 
 function Cart() {
-    const [cartItems, setCartItems] = useState(() => {
-        return JSON.parse(localStorage.getItem('cartItems')) || [];
-    });
+    const cart = useContext(CartContext);
+    const { cartItems, totalPrice, deleteItem, deleteAll, flipCart } = cart;
     const location = useLocation();
-
-    const [totalPrice, setTotalPrice] = useState(0)
-
-    const deleteItem = (id) => {
-        setCartItems(JSON.parse(localStorage.getItem('cartItems')))
-        var newCartItems
-
-        if (cartItems.find(item => item.id === id && item.amount > 1)) {
-            newCartItems = cartItems.map(item => {
-                if (item.id === id && item.amount > 1) {
-                    item.amount -= 1
-                }
-                return item
-            })
-        } else {
-            newCartItems = cartItems.filter(item => item.id !== id)
-        }
-
-        setCartItems(newCartItems)
-        localStorage.setItem('cartItems', JSON.stringify(newCartItems));
-    }
-
-    const deleteAll = () => {
-        setCartItems([]);
-        localStorage.setItem('cartItems', JSON.stringify([]));
-    }
-
-    useEffect(() => {
-        let price = 0
-        for (let i = 0; i < cartItems.length; i++) {
-            price += (cartItems[i].price * cartItems[i].amount)
-        }
-        setTotalPrice(price)
-    }, [cartItems])
-
-    function flipCart() {
-        if (location.pathname === '/checkout') {
-            return document.getElementById('cart').style.display = 'none'
-        }
-
-        if (document.getElementById('cart').style.display === 'block') {
-            document.getElementById('cart').style.display = 'none'
-        } else {
-            document.getElementById('cart').style.display = 'block'
-        }
-    }
 
     return (
         <>
-            <button onClick={() => { flipCart(); setCartItems(JSON.parse(localStorage.getItem('cartItems'))) }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
+            <button onClick={() => { flipCart(location); }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
             <div className="cart" id='cart'>
                 <div className='cartBtns'>
                     <h2>Varukorg</h2>
-                    <button onClick={() => { flipCart() }}>X</button>
+                    <button onClick={() => { flipCart(location) }}>X</button>
                 </div>
                 <div className='items'>
                     {cartItems.map((item, index) =>
