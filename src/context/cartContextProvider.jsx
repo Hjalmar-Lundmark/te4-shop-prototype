@@ -4,11 +4,9 @@ import { useLocation } from 'react-router-dom'
 export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
-    const [cartItems, setCartItems] = useState(() => {
-        return JSON.parse(localStorage.getItem('cartItems')) || [];
-    });
-    const location = useLocation();
+    const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cartItems')) || []);
 
+    const location = useLocation();
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalItems, setTotalItems] = useState(0)
 
@@ -36,6 +34,12 @@ export const CartContextProvider = ({ children }) => {
         localStorage.setItem('cartItems', JSON.stringify([]));
     }
 
+    // idk if ill use this
+    useEffect(() => {
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }, [cartItems]);
+
+    // idk
     useEffect(() => {
         let price = 0
         for (let i = 0; i < cartItems.length; i++) {
@@ -114,6 +118,8 @@ export const CartContextProvider = ({ children }) => {
     return (
         <CartContext.Provider value={{
             cartItems,
+            totalPrice,
+            totalItems,
             addItem,
             deleteItem,
             deleteAll,
@@ -121,16 +127,8 @@ export const CartContextProvider = ({ children }) => {
             message,
             getTotalPrice,
             getTotalItems,
-            // clearCart,
-            // isInCart,
-            // getTotalItems,
-            // getTotalPrice,
-            // increaseQuantity,
-            // decreaseQuantity
         }}>
             {children}
         </CartContext.Provider>
     );
 }
-
-// Path: src/components/Cart.jsx
