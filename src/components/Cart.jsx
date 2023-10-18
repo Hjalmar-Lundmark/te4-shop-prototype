@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react'
+import { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Cart.css'
 import CartItem from './CartItem'
@@ -6,26 +6,9 @@ import { PiShoppingCartSimpleDuotone } from 'react-icons/pi';
 import { CartContext } from "../context/cartContextProvider";
 
 function Cart() {
-    const { deleteItem, deleteAll, flipCart, cartItems } = useContext(CartContext)
-    const [cartItems2, setCartItems] = useState(cartItems || []);
-    const [totalPrice, setTotalPrice] = useState(0)
-
-
+    const cart = useContext(CartContext);
+    const { cartItems, totalPrice, deleteItem, deleteAll, flipCart } = cart;
     const location = useLocation();
-
-    useEffect(() => {
-        let price = 0
-        for (let i = 0; i < cartItems.length; i++) {
-            price += (cartItems[i].price * cartItems[i].amount)
-        }
-        setTotalPrice(price)
-    }, [cartItems])
-
-    useEffect(() => {
-        setCartItems(JSON.parse(localStorage.getItem('cartItems')))
-        console.log(cartItems)
-        console.log(cartItems2)
-    }, [])
 
     // const [cartItems, setCartItems] = useState(() => {
     //     return JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -71,7 +54,7 @@ function Cart() {
 
     return (
         <>
-            <button onClick={() => { flipCart(location); setCartItems(JSON.parse(localStorage.getItem('cartItems'))) }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
+            <button onClick={() => { flipCart(location); }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
             <div className="cart" id='cart'>
                 <div className='cartBtns'>
                     <h2>Varukorg</h2>

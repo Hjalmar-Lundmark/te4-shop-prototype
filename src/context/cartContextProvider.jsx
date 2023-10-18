@@ -1,5 +1,4 @@
 import { createContext, useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom'
 
 export const CartContext = createContext();
 
@@ -100,6 +99,7 @@ export const CartContextProvider = ({ children }) => {
         }
 
         localStorage.setItem('cartItems', JSON.stringify(newCartItems));
+        setCartItems(newCartItems)
     }
 
     function message(text, type) {

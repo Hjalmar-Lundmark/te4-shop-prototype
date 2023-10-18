@@ -1,11 +1,13 @@
 import './Productpage.css'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { useContext } from 'react'
+import { CartContext } from "../context/cartContextProvider";
 
 function Productpage() {
-    var cartItems = JSON.parse(localStorage.getItem('cartItems'));
     const { id } = useParams()
     const [product, setProduct] = useState([])
+    const { addItem } = useContext(CartContext)
 
     async function fetchProduct() {
         await fetch(`http://localhost:3000/product/${id}`)
@@ -17,44 +19,44 @@ function Productpage() {
             });
     }
 
-    const addItem = () => {
-        cartItems = JSON.parse(localStorage.getItem('cartItems'));
-        let newCartItems
+    // const addItem = () => {
+    //     cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    //     let newCartItems
 
-        if (cartItems.find(item => item.id === id)) {
-            console.log('Produkten finns redan i varukorgen')
-            newCartItems = cartItems.map(item => {
-                if (item.id === id) {
-                    item.amount += 1
-                }
-                return item
-            })
-        } else {
-            newCartItems = [...cartItems, { id: id, name: product.name, img: product.image, price: product.price, amount: 1 }]
-        }
+    //     if (cartItems.find(item => item.id === id)) {
+    //         console.log('Produkten finns redan i varukorgen')
+    //         newCartItems = cartItems.map(item => {
+    //             if (item.id === id) {
+    //                 item.amount += 1
+    //             }
+    //             return item
+    //         })
+    //     } else {
+    //         newCartItems = [...cartItems, { id: id, name: product.name, img: product.image, price: product.price, amount: 1 }]
+    //     }
 
-        console.log(cartItems)
-        console.log(newCartItems)
-        if (cartItems === newCartItems) {
-            message('Något gick fel, försök igen', 'warning')
-        } else {
-            message(product.name + ' lades till i varukorgen', 'success')
-        }
+    //     console.log(cartItems)
+    //     console.log(newCartItems)
+    //     if (cartItems === newCartItems) {
+    //         message('Något gick fel, försök igen', 'warning')
+    //     } else {
+    //         message(product.name + ' lades till i varukorgen', 'success')
+    //     }
 
-        localStorage.setItem('cartItems', JSON.stringify(newCartItems));
-    }
+    //     localStorage.setItem('cartItems', JSON.stringify(newCartItems));
+    // }
 
-    function message(text, type) {
-        const msgbox = document.querySelector('#msgbox');
+    // function message(text, type) {
+    //     const msgbox = document.querySelector('#msgbox');
 
-        const p = document.createElement('p');
-        p.classList.add(type);
-        p.textContent = text;
-        msgbox.appendChild(p);
-        setTimeout(() => {
-            p.parentNode.removeChild(p);
-        }, 2500);
-    }
+    //     const p = document.createElement('p');
+    //     p.classList.add(type);
+    //     p.textContent = text;
+    //     msgbox.appendChild(p);
+    //     setTimeout(() => {
+    //         p.parentNode.removeChild(p);
+    //     }, 2500);
+    // }
 
     useEffect(() => {
         fetchProduct()
@@ -73,7 +75,7 @@ function Productpage() {
                         {product.price} kr
                     </p>
                     <p>I lager {product.inStock} st </p>
-                    <button onClick={() => { document.getElementById('cart').style.display = 'none'; addItem() }}>Lägg i varukorg</button>
+                    <button onClick={() => { document.getElementById('cart').style.display = 'none'; addItem(id, product.name, product.image, product.price) }}>Lägg i varukorg</button>
                 </div>
             </div >
             <h2>Mer info här nere?</h2>

@@ -1,71 +1,76 @@
-import { useEffect, useState } from 'react'
+import { useContext } from 'react'
 import CartItem from '../components/CartItem'
+import { CartContext } from "../context/cartContextProvider";
 
 function Checkoutpage() {
-    const [cartItems, setCartItems] = useState([])
-    const [totalPrice, setTotalPrice] = useState(0)
-    const [totalItems, setTotalItems] = useState(0)
+    const cart = useContext(CartContext);
+    const { cartItems, totalPrice, totalItems, deleteItem, deleteAll } = cart;
 
-    const deleteItem = (id) => {
-        setCartItems(JSON.parse(localStorage.getItem('cartItems')))
-        var newCartItems
 
-        if (cartItems.find(item => item.id === id && item.amount > 1)) {
-            newCartItems = cartItems.map(item => {
-                if (item.id === id && item.amount > 1) {
-                    item.amount -= 1
-                }
-                return item
-            })
-        } else {
-            newCartItems = cartItems.filter(item => item.id !== id)
-        }
+    // const [cartItems, setCartItems] = useState([])
+    // const [totalPrice, setTotalPrice] = useState(0)
+    // const [totalItems, setTotalItems] = useState(0)
 
-        setCartItems(newCartItems)
-        localStorage.setItem('cartItems', JSON.stringify(newCartItems));
-    }
+    // const deleteItem = (id) => {
+    //     setCartItems(JSON.parse(localStorage.getItem('cartItems')))
+    //     var newCartItems
 
-    const deleteAll = () => {
-        setCartItems([]);
-        localStorage.setItem('cartItems', JSON.stringify([]));
-    }
+    //     if (cartItems.find(item => item.id === id && item.amount > 1)) {
+    //         newCartItems = cartItems.map(item => {
+    //             if (item.id === id && item.amount > 1) {
+    //                 item.amount -= 1
+    //             }
+    //             return item
+    //         })
+    //     } else {
+    //         newCartItems = cartItems.filter(item => item.id !== id)
+    //     }
 
-    // maybe fetch cart items from backend instead of localStorage?
-    // does not work
-    async function fetchProduct() {
-        let items = []
+    //     setCartItems(newCartItems)
+    //     localStorage.setItem('cartItems', JSON.stringify(newCartItems));
+    // }
 
-        for (let i = 0; i < cartItems.length; i++) {
-            await fetch(`http://localhost:3000/product/${cartItems[i].id}`)
-                .then(res => res.json())
-                .then(result => {
-                    console.log(result.data[0])
-                    items.push(result.data[0])
-                    console.log(items)
-                }).catch(err => {
-                    console.log(err)
-                });
-        }
+    // const deleteAll = () => {
+    //     setCartItems([]);
+    //     localStorage.setItem('cartItems', JSON.stringify([]));
+    // }
 
-        // setCartItems(items) 
-        // localStorage.setItem('cartItems', JSON.stringify(items));
-    }
+    // // maybe fetch cart items from backend instead of localStorage?
+    // // does not work
+    // async function fetchProduct() {
+    //     let items = []
 
-    useEffect(() => {
-        setCartItems(JSON.parse(localStorage.getItem('cartItems')))
-        fetchProduct()
-    }, [])
+    //     for (let i = 0; i < cartItems.length; i++) {
+    //         await fetch(`http://localhost:3000/product/${cartItems[i].id}`)
+    //             .then(res => res.json())
+    //             .then(result => {
+    //                 console.log(result.data[0])
+    //                 items.push(result.data[0])
+    //                 console.log(items)
+    //             }).catch(err => {
+    //                 console.log(err)
+    //             });
+    //     }
 
-    useEffect(() => {
-        let price = 0
-        let items = 0
-        for (let i = 0; i < cartItems.length; i++) {
-            price += (cartItems[i].price * cartItems[i].amount)
-            items += 1
-        }
-        setTotalPrice(price)
-        setTotalItems(items)
-    }, [cartItems])
+    //     // setCartItems(items) 
+    //     // localStorage.setItem('cartItems', JSON.stringify(items));
+    // }
+
+    // useEffect(() => {
+    //     setCartItems(JSON.parse(localStorage.getItem('cartItems')))
+    //     fetchProduct()
+    // }, [])
+
+    // useEffect(() => {
+    //     let price = 0
+    //     let items = 0
+    //     for (let i = 0; i < cartItems.length; i++) {
+    //         price += (cartItems[i].price * cartItems[i].amount)
+    //         items += 1
+    //     }
+    //     setTotalPrice(price)
+    //     setTotalItems(items)
+    // }, [cartItems])
 
     return (
         <>
