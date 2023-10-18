@@ -16,7 +16,6 @@ function Allpage() {
       });
   }
 
-
   useEffect(() => {
     fetchProducts()
   }, [])

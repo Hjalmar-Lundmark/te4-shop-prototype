@@ -6,7 +6,6 @@ export const CartContext = createContext();
 export const CartContextProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState(JSON.parse(localStorage.getItem('cartItems')) || []);
 
-    const location = useLocation();
     const [totalPrice, setTotalPrice] = useState(0)
     const [totalItems, setTotalItems] = useState(0)
 
@@ -64,7 +63,7 @@ export const CartContextProvider = ({ children }) => {
         setTotalItems(items)
     }
 
-    function flipCart() {
+    function flipCart(location) {
         if (location.pathname === '/checkout') {
             return document.getElementById('cart').style.display = 'none'
         }
