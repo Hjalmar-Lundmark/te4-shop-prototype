@@ -26,6 +26,7 @@ function Checkoutpage() {
             newCart.push(await fetchOneProduct(cartItems[i].id))
         }
         console.log(newCart)
+        // then add to cart with amount and the stuff
     }
 
     return (

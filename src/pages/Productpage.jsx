@@ -36,7 +36,7 @@ function Productpage() {
                         {product.price} kr
                     </p>
                     <p>I lager {product.inStock} st </p>
-                    <button onClick={() => { document.getElementById('cart').style.display = 'none'; addItem(id, product.name, product.image, product.price) }}>Lägg i varukorg</button>
+                    <button onClick={() => { addItem(id, product.name, product.image, product.price) }}>Lägg i varukorg</button>
                 </div>
             </div>
         </>

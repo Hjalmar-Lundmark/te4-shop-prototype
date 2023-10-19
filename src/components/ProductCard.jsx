@@ -16,7 +16,7 @@ function ProductCard(props) {
                     {price} kr
                 </p>
             </Link>
-            <button onClick={() => { document.getElementById('cart').style.display = 'none'; addItem(id, name, img, price) }}>Lägg i varukorg</button>
+            <button onClick={() => { addItem(id, name, img, price) }}>Lägg i varukorg</button>
         </li>
     )
 }

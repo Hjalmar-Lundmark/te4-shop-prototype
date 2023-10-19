@@ -74,7 +74,6 @@ export const CartContextProvider = ({ children }) => {
         let newCartItems
 
         if (cartItems.find(item => item.id === id)) {
-            console.log('Produkten finns redan i varukorgen')
             newCartItems = cartItems.map(item => {
                 if (item.id === id) {
                     item.amount += 1

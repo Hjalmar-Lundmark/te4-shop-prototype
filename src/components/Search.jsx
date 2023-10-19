@@ -8,7 +8,6 @@ function Search() {
     const handleSearch = (e) => {
         e.preventDefault()
         console.log(searchInput.current.value)
-        //redirect(`/all/search/${searchInput.current.value}`)
         if (searchInput.current.value !== '') {
             navigate(`/all/search/${searchInput.current.value}`)
         }
