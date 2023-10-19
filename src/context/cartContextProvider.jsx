@@ -73,6 +73,7 @@ export const CartContextProvider = ({ children }) => {
         setCartItems(JSON.parse(localStorage.getItem('cartItems')))
         let newCartItems
 
+        // feels like bad variable names, but it works
         if (cartItems.find(item => item.id === id)) {
             newCartItems = cartItems.map(item => {
                 if (item.id === id) {
