@@ -6,6 +6,27 @@ function Checkoutpage() {
     const cart = useContext(CartContext);
     const { cartItems, totalPrice, totalItems, deleteItem, deleteAll } = cart;
 
+    async function fetchOneProduct(id) {
+        let newCart = []
+        await fetch(`http://localhost:3000/product/${id}`)
+            .then(res => res.json())
+            .then(result => {
+                console.log(result.data[0])
+                newCart.push(result.data[0])
+            }).catch(err => {
+                console.log(err)
+            });
+        return newCart[0]
+    }
+
+    async function test() {
+        let newCart = []
+        for (let i = 0; i < cartItems.length; i++) {
+            newCart.push(await fetchOneProduct(cartItems[i].id))
+        }
+        console.log(newCart)
+    }
+
     return (
         <>
             <h1>Checkout Page</h1>
@@ -27,7 +48,7 @@ function Checkoutpage() {
                 <h3>Din varukorg</h3>
                 <p>{totalPrice} kr</p>
                 <p>{totalItems} st</p>
-                <button><h3>Betala</h3></button>
+                <button onClick={() => { test() }}><h3>Betala</h3></button>
             </div>
         </>
     )

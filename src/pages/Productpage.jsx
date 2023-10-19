@@ -38,9 +38,7 @@ function Productpage() {
                     <p>I lager {product.inStock} st </p>
                     <button onClick={() => { document.getElementById('cart').style.display = 'none'; addItem(id, product.name, product.image, product.price) }}>Lägg i varukorg</button>
                 </div>
-            </div >
-            <h2>Mer info här nere?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem cupiditate excepturi eos ducimus vitae. Saepe assumenda modi illo aliquam molestiae voluptatum beatae ducimus, voluptate rem sit odio quis vero quaerat.</p>
+            </div>
         </>
     )
 }
