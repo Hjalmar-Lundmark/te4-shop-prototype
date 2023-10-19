@@ -6,6 +6,7 @@ function Checkoutpage() {
     const cart = useContext(CartContext);
     const { cartItems, totalPrice, totalItems, deleteItem, deleteAll } = cart;
 
+    // testing, the idea is to get product info from the database instead of using the cartItems array
     async function fetchOneProduct(id) {
         let newCart = []
         await fetch(`http://localhost:3000/product/${id}`)
