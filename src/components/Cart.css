@@ -82,13 +82,3 @@
     color: white;
     font-size: 1rem;
 }
-
-.itemsCheckout>.item>img {
-    width: 10%;
-}
-
-@media screen and (max-width: 700px) {
-    .itemsCheckout>.item>img {
-        width: 30%;
-    }
-}

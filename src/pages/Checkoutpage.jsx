@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import CartItem from '../components/CartItem'
 import { CartContext } from "../context/cartContextProvider";
+import './Checkoutpage.css'
 
 function Checkoutpage() {
     const cart = useContext(CartContext);
@@ -51,6 +52,12 @@ function Checkoutpage() {
                 <p>{totalPrice} kr</p>
                 <p>{totalItems} st</p>
                 <button onClick={() => { test() }}><h3>Betala</h3></button>
+            </div>
+            <div className='checkoutForm'>
+                <form action="POST">
+                    <input type="email" name="email" id="email" placeholder='Email' /><br />
+                    <input type="text" name='adress' id='adress' placeholder='Adress' /><br />
+                </form>
             </div>
         </>
     )

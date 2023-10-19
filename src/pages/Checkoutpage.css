@@ -1,0 +1,20 @@
+.checkoutForm {
+    background-color: grey;
+    padding: 1rem;
+    border: solid red 1px;
+}
+
+.checkoutForm>form>input {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.itemsCheckout>.item>img {
+    width: 10%;
+}
+
+@media screen and (max-width: 700px) {
+    .itemsCheckout>.item>img {
+        width: 30%;
+    }
+}
