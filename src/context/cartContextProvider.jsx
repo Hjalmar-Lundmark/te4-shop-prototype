@@ -32,18 +32,13 @@ export const CartContextProvider = ({ children }) => {
         localStorage.setItem('cartItems', JSON.stringify([]));
     }
 
-    // idk if ill use this
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }, [cartItems]);
 
-    // idk
     useEffect(() => {
-        let price = 0
-        for (let i = 0; i < cartItems.length; i++) {
-            price += (cartItems[i].price * cartItems[i].amount)
-        }
-        setTotalPrice(price)
+        getTotalPrice()
+        getTotalItems()
     }, [cartItems])
 
     function getTotalPrice() {
@@ -57,7 +52,7 @@ export const CartContextProvider = ({ children }) => {
     function getTotalItems() {
         let items = 0
         for (let i = 0; i < cartItems.length; i++) {
-            items += 1
+            items += (1 * cartItems[i].amount)
         }
         setTotalItems(items)
     }
