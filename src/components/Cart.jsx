@@ -7,12 +7,15 @@ import { CartContext } from "../context/cartContextProvider";
 
 function Cart() {
     const cart = useContext(CartContext);
-    const { cartItems, totalPrice, deleteItem, deleteAll, flipCart } = cart;
+    const { cartItems, totalPrice, totalItems, deleteItem, deleteAll, flipCart } = cart;
     const location = useLocation();
 
     return (
         <>
-            <button onClick={() => { flipCart(location); }}><h3 className='navBtn'><PiShoppingCartSimpleDuotone /></h3></button>
+            <button onClick={() => { flipCart(location); }} className='navBtn'>
+                <h3 className='navBtnH3'><PiShoppingCartSimpleDuotone /></h3>
+                {totalItems ? (<><h5 className='navBtnH3 itemCount'>{totalItems}</h5></>) : (<></>)}
+            </button>
             <div className="cart" id='cart'>
                 <div className='cartBtns'>
                     <h2>Varukorg</h2>
