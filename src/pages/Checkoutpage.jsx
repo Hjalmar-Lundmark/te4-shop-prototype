@@ -55,8 +55,11 @@ function Checkoutpage() {
             </div>
             <div className='checkoutForm'>
                 <form action="POST">
-                    <input type="email" name="email" id="email" placeholder='Email' /><br />
+                    <input type="text" name='firstName' id='firstName' placeholder='Förnamn' />
+                    <input type="text" name='lastName' id='lastName' placeholder='Efternamn' /><br />
+                    <input type="email" name="email" id="email" placeholder='Email' />
                     <input type="text" name='adress' id='adress' placeholder='Adress' /><br />
+
                 </form>
             </div>
         </>
