@@ -12,10 +12,19 @@ function Cart() {
 
     return (
         <>
-            <button onClick={() => { flipCart(location); }} className='navBtn'>
+            <button onClick={() => { flipCart(location); }} className='navBtn openCart'>
                 <h3 className='navBtnH3'><PiShoppingCartSimpleDuotone /></h3>
                 {totalItems ? (<><h5 className='navBtnH3 itemCount'>{totalItems}</h5></>) : (<></>)}
             </button>
+            {/* Above: big screens, below: phone and small screens */}
+            <Link to='/checkout'>
+                <button className='navBtn mobileCart'>
+                    <h3 className='navBtnH3'><PiShoppingCartSimpleDuotone /></h3>
+                    {totalItems ? (<><h5 className='navBtnH3 itemCount'>{totalItems}</h5></>) : (<></>)}
+                </button>
+            </Link>
+
+            {/* Inside cart */}
             <div className="cart" id='cart'>
                 <div className='cartBtns'>
                     <h2>Varukorg</h2>
