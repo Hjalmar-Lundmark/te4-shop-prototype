@@ -53,7 +53,7 @@ function Checkoutpage() {
                 <p>{totalItems} st</p>
                 <button onClick={() => { test() }}><h3>Betala</h3></button>
             </div>
-            <div className='checkoutForm'>
+            {/* <div className='checkoutForm'>
                 <form action="POST">
                     <input type="text" name='firstName' id='firstName' placeholder='Förnamn' />
                     <input type="text" name='lastName' id='lastName' placeholder='Efternamn' /><br />
@@ -61,7 +61,7 @@ function Checkoutpage() {
                     <input type="text" name='adress' id='adress' placeholder='Adress' /><br />
 
                 </form>
-            </div>
+            </div> */}
         </>
     )
 }
