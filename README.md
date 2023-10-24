@@ -1,5 +1,9 @@
 # Webbshop för djurkläder
 
+Bla bla bla
+
+infoga bilder
+
 ## Att göra - frontend
 1. Googla snyggare varukorg
 3. Bättre mobilanpassning
