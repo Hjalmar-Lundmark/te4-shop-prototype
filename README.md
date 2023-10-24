@@ -1,4 +1,4 @@
 # Webbshop för djurkläder
 Webbshop för djurkläder
 
-Läs mer i [PM.md](PM.md)
+Läs mer och se bilder i [PM.md](PM.md)
